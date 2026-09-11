@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Harbor Hotel — Hospitality Website Demo | MubeCodes</title>
+  <meta name="description" content="Portfolio demo: luxury hospitality website by MubeCodes — rooms, dining, and bookings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../demo.css" />
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body class="demo demo--hospitality">
+  <a class="demo-badge" href="../../index.html#portfolio">← MubeCodes Portfolio</a>
+  <header class="d-nav">
+    <strong>Azure Harbor</strong>
+    <nav>
+      <a href="#rooms">Rooms</a>
+      <a href="#dining">Dining</a>
+      <a href="#book" class="d-cta">Book Stay</a>
+    </nav>
+  </header>
+  <section class="d-hero">
+    <p class="d-eyebrow">Boutique hospitality</p>
+    <h1>Stay where the water meets the sky</h1>
+    <p class="d-lead">A coastal hotel experience designed for bookings — elegant rooms, fine dining, and effortless reservation.</p>
+    <a href="#book" class="d-btn">Check Availability</a>
+  </section>
+  <section id="rooms" class="d-section">
+    <h2>Rooms &amp; suites</h2>
+    <div class="d-grid3">
+      <article><h3>Harbor View</h3><p>Light-filled rooms overlooking the marina.</p><span>From $189 / night</span></article>
+      <article><h3>Signature Suite</h3><p>Private terrace, spa bath, evening turndown.</p><span>From $289 / night</span></article>
+      <article><h3>Family Loft</h3><p>Two bedrooms with lounge and kitchenette.</p><span>From $249 / night</span></article>
+    </div>
+  </section>
+  <section id="dining" class="d-section d-section--alt">
+    <h2>Dining</h2>
+    <p class="d-copy">Seasonal coastal cuisine at Tide &amp; Ember — breakfast, dinner, and private events.</p>
+  </section>
+  <section id="book" class="d-section d-book">
+    <h2>Reserve your stay</h2>
+    <form class="d-form" onsubmit="event.preventDefault(); alert('Demo booking form — connect to your reservation system.');">
+      <input type="date" required aria-label="Check in" />
+      <input type="date" required aria-label="Check out" />
+      <select aria-label="Guests"><option>2 Guests</option><option>1 Guest</option><option>3 Guests</option><option>4 Guests</option></select>
+      <button type="submit">Request Booking</button>
+    </form>
+  </section>
+  <footer class="d-foot">Demo website by <a href="../../index.html">MubeCodes</a> — Hospitality portfolio sample</footer>
+</body>
+</html>

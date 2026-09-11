@@ -1,0 +1,12 @@
+:root {
+  --bg: #0c1218;
+  --ink: #f3efe6;
+  --muted: #b8b0a2;
+  --accent: #c9a46a;
+  --panel: #151c24;
+  --line: rgba(201, 164, 106, 0.25);
+  --display: "Cormorant Garamond", serif;
+  --body: "Outfit", sans-serif;
+  --hero: radial-gradient(ellipse at 70% 20%, rgba(201, 164, 106, 0.22), transparent 50%),
+    linear-gradient(160deg, #0c1218 0%, #162230 45%, #0c1218 100%);
+}

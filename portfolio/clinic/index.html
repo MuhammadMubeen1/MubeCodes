@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClearPath Dental — Clinic Website Demo | MubeCodes</title>
+  <meta name="description" content="Portfolio demo: dental clinic website by MubeCodes — services and appointment booking." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../demo.css" />
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body class="demo demo--clinic">
+  <a class="demo-badge" href="../../index.html#portfolio">← MubeCodes Portfolio</a>
+  <header class="d-nav">
+    <strong>ClearPath Dental</strong>
+    <nav>
+      <a href="#care">Care</a>
+      <a href="#hours">Hours</a>
+      <a href="#book" class="d-cta">Book Visit</a>
+    </nav>
+  </header>
+  <section class="d-hero">
+    <p class="d-eyebrow">Family dental care</p>
+    <h1>Healthy smiles start here</h1>
+    <p class="d-lead">Clinic website focused on trust and appointments — services, hours, and easy booking.</p>
+    <a href="#book" class="d-btn">Book Appointment</a>
+  </section>
+  <section id="care" class="d-section">
+    <h2>Patient care</h2>
+    <div class="d-grid3">
+      <article><h3>Checkups</h3><p>Routine exams and cleaning.</p></article>
+      <article><h3>Whitening</h3><p>Safe in-clinic whitening.</p></article>
+      <article><h3>Orthodontics</h3><p>Aligners and braces consults.</p></article>
+    </div>
+  </section>
+  <section id="hours" class="d-section d-section--alt">
+    <h2>Clinic hours</h2>
+    <p class="d-copy">Mon–Fri 9:00–18:00 · Sat 10:00–14:00 · Emergency line available</p>
+  </section>
+  <section id="book" class="d-section d-book">
+    <h2>Request an appointment</h2>
+    <form class="d-form" onsubmit="event.preventDefault(); alert('Demo appointment form — connect to your clinic CRM.');">
+      <input type="text" placeholder="Full name" required />
+      <input type="email" placeholder="Email" required />
+      <select required><option value="">Reason</option><option>Checkup</option><option>Whitening</option><option>Orthodontics</option></select>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+  <footer class="d-foot">Demo website by <a href="../../index.html">MubeCodes</a> — Clinic portfolio sample</footer>
+</body>
+</html>

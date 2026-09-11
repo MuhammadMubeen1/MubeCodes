@@ -1,0 +1,210 @@
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body.demo {
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.demo-badge {
+  position: fixed;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 50;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  color: var(--ink);
+}
+
+.d-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem clamp(1.25rem, 4vw, 2.5rem);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.d-nav strong {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.d-nav nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.d-nav .d-cta {
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.d-hero {
+  padding: clamp(3.5rem, 10vw, 6rem) clamp(1.25rem, 4vw, 2.5rem) clamp(3rem, 7vw, 4.5rem);
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--hero);
+  border-radius: 0 0 2rem 2rem;
+}
+
+.d-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
+}
+
+.d-hero h1 {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+  margin-bottom: 1rem;
+}
+
+.d-lead {
+  max-width: 36rem;
+  color: var(--muted);
+  font-weight: 300;
+  font-size: 1.05rem;
+  margin-bottom: 1.75rem;
+}
+
+.d-btn {
+  display: inline-flex;
+  padding: 0.85rem 1.35rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.d-section {
+  padding: clamp(2.75rem, 6vw, 4rem) clamp(1.25rem, 4vw, 2.5rem);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.d-section--alt {
+  background: var(--panel);
+  max-width: none;
+  padding-left: max(1.25rem, calc((100% - 1080px) / 2 + 1.25rem));
+  padding-right: max(1.25rem, calc((100% - 1080px) / 2 + 1.25rem));
+}
+
+.d-section h2 {
+  font-family: var(--display);
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.35rem;
+}
+
+.d-copy {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 40rem;
+}
+
+.d-grid3 {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .d-grid3 { grid-template-columns: repeat(3, 1fr); }
+  .d-nav nav a:not(.d-cta) { display: inline; }
+}
+
+@media (max-width: 719px) {
+  .d-nav nav a:not(.d-cta) { display: none; }
+}
+
+.d-grid3 article {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--panel) 80%, transparent);
+}
+
+.d-grid3 h3 {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.d-grid3 p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 300;
+}
+
+.d-grid3 span {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.d-book .d-form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 420px;
+}
+
+.d-form input,
+.d-form select,
+.d-form button {
+  font: inherit;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.d-form button {
+  background: var(--accent);
+  color: #0a0a0a;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.d-foot {
+  padding: 2rem clamp(1.25rem, 4vw, 2.5rem) 2.5rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.d-foot a {
+  color: var(--accent);
+  font-weight: 600;
+}

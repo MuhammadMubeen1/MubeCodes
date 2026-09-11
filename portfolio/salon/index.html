@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina Salon — Beauty Salon Website Demo | MubeCodes</title>
+  <meta name="description" content="Portfolio demo: beauty salon website by MubeCodes — services, booking, and brand presence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../demo.css" />
+  <link rel="stylesheet" href="theme.css" />
+</head>
+<body class="demo demo--salon">
+  <a class="demo-badge" href="../../index.html#portfolio">← MubeCodes Portfolio</a>
+  <header class="d-nav">
+    <strong>Lumina Salon</strong>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#team">Stylists</a>
+      <a href="#book" class="d-cta">Book Appointment</a>
+    </nav>
+  </header>
+  <section class="d-hero">
+    <p class="d-eyebrow">Hair · Skin · Beauty</p>
+    <h1>Look luminous. Feel confident.</h1>
+    <p class="d-lead">A modern salon website built to fill the calendar — services, stylists, and online booking.</p>
+    <a href="#book" class="d-btn">Book Now</a>
+  </section>
+  <section id="services" class="d-section">
+    <h2>Signature services</h2>
+    <div class="d-grid3">
+      <article><h3>Cut &amp; Style</h3><p>Precision cuts and finish styling.</p><span>From $45</span></article>
+      <article><h3>Color Lab</h3><p>Balayage, gloss, and custom color.</p><span>From $95</span></article>
+      <article><h3>Glow Facial</h3><p>Hydration facial for radiant skin.</p><span>From $70</span></article>
+    </div>
+  </section>
+  <section id="team" class="d-section d-section--alt">
+    <h2>Meet the stylists</h2>
+    <div class="d-grid3">
+      <article><h3>Ayesha</h3><p>Color specialist · 8 yrs</p></article>
+      <article><h3>Nora</h3><p>Bridal &amp; events · 6 yrs</p></article>
+      <article><h3>Sam</h3><p>Men’s grooming · 5 yrs</p></article>
+    </div>
+  </section>
+  <section id="book" class="d-section d-book">
+    <h2>Book your appointment</h2>
+    <form class="d-form" onsubmit="event.preventDefault(); alert('Demo booking form — connect to your salon scheduler.');">
+      <input type="text" placeholder="Your name" required />
+      <input type="tel" placeholder="Phone" required />
+      <select required><option value="">Service</option><option>Cut & Style</option><option>Color Lab</option><option>Glow Facial</option></select>
+      <button type="submit">Request Slot</button>
+    </form>
+  </section>
+  <footer class="d-foot">Demo website by <a href="../../index.html">MubeCodes</a> — Salon portfolio sample</footer>
+</body>
+</html>

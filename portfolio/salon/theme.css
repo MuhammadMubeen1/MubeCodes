@@ -1,0 +1,12 @@
+:root {
+  --bg: #1a1216;
+  --ink: #fff6f8;
+  --muted: #c9b0b8;
+  --accent: #e8a0b0;
+  --panel: #24181e;
+  --line: rgba(232, 160, 176, 0.28);
+  --display: "Fraunces", serif;
+  --body: "Outfit", sans-serif;
+  --hero: radial-gradient(ellipse at 30% 10%, rgba(232, 160, 176, 0.28), transparent 45%),
+    linear-gradient(165deg, #1a1216, #2a1a22 50%, #1a1216);
+}
