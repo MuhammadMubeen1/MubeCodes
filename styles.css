@@ -34,7 +34,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -301,26 +301,36 @@ select {
   text-align: center;
   padding-inline: 0;
   box-sizing: border-box;
+  overflow: visible;
 }
 
 .hero__brand {
-  font-family: var(--font-display);
-  font-weight: 800;
-  /* Scales to fit “MubeCodes” on narrow phones without clipping */
-  font-size: clamp(2.15rem, 11.5vw, 5.6rem);
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  padding: 0.08em 0.05em 0.14em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   overflow: visible;
-  white-space: normal;
-  word-break: keep-all;
   color: var(--white);
   text-shadow: 0 0 48px rgba(26, 159, 255, 0.35);
   animation: fade-up 0.9s var(--ease) 0.1s both;
-  position: relative;
+}
+
+.hero__brand-text {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  /* Always fit full “MubeCodes” inside the viewport */
+  font-size: min(5.6rem, calc((100vw - 2.75rem) / 8.5));
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  white-space: nowrap;
+  max-width: 100%;
+  padding-inline: 0.1em;
+  box-sizing: border-box;
 }
 
 .hero__brand::after {
@@ -328,16 +338,14 @@ select {
   display: block;
   width: 4.5rem;
   height: 3px;
-  margin: 0.75rem auto 0;
+  margin: 0.7rem auto 0;
   border-radius: 999px;
   background: linear-gradient(90deg, transparent, var(--cyan), transparent);
 }
 
-@media (min-width: 640px) {
-  .hero__brand {
-    font-size: clamp(3.25rem, 8vw, 5.6rem);
-    white-space: nowrap;
-    width: auto;
+@media (min-width: 768px) {
+  .hero__brand-text {
+    font-size: clamp(3.5rem, 8vw, 5.6rem);
   }
 }
 
