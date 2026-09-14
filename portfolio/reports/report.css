@@ -235,3 +235,41 @@ tr:last-child td { border-bottom: none; }
   color: #031018;
   font-weight: 700;
 }
+
+.meta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--cyan);
+}
+
+.badge--country {
+  background: rgba(26, 159, 255, 0.12);
+}
+
+.source-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.live-link {
+  color: var(--cyan);
+  border-bottom: 1px solid rgba(92, 225, 255, 0.35);
+}
+
+.live-link:hover {
+  color: var(--ink);
+}
