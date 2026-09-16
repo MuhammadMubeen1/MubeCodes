@@ -687,6 +687,27 @@ select {
   flex: 1;
 }
 
+.project__backlinks {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  line-height: 1.45;
+  padding: 0.45rem 0.65rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: -0.1rem;
+}
+
+.project__backlinks strong {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.15rem;
+}
+
 .project__links {
   display: flex;
   flex-wrap: wrap;
