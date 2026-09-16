@@ -62,6 +62,75 @@
     });
   });
 
+  // Portfolio 5-Tab Switching Logic with Keyboard Accessibility
+  const tabs = Array.from(document.querySelectorAll(".portfolio__tab"));
+  const panels = Array.from(document.querySelectorAll(".portfolio__panel"));
+
+  if (tabs.length && panels.length) {
+    const activateTab = (selectedTab) => {
+      const targetId = selectedTab.getAttribute("aria-controls");
+
+      tabs.forEach((tab) => {
+        const isMatch = tab === selectedTab;
+        tab.classList.toggle("is-active", isMatch);
+        tab.setAttribute("aria-selected", String(isMatch));
+        tab.setAttribute("tabindex", isMatch ? "0" : "-1");
+      });
+
+      panels.forEach((panel) => {
+        const isMatch = panel.id === targetId;
+        panel.hidden = !isMatch;
+        if (isMatch) {
+          // Instantly reveal all elements in the activated panel
+          panel.querySelectorAll(".reveal").forEach((el) => {
+            el.classList.add("is-visible");
+          });
+        }
+      });
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activateTab(tab));
+
+      // Keyboard arrow navigation
+      tab.addEventListener("keydown", (e) => {
+        let newIndex = null;
+        if (e.key === "ArrowRight") {
+          newIndex = (index + 1) % tabs.length;
+        } else if (e.key === "ArrowLeft") {
+          newIndex = (index - 1 + tabs.length) % tabs.length;
+        } else if (e.key === "Home") {
+          newIndex = 0;
+        } else if (e.key === "End") {
+          newIndex = tabs.length - 1;
+        }
+
+        if (newIndex !== null) {
+          e.preventDefault();
+          tabs[newIndex].focus();
+          activateTab(tabs[newIndex]);
+        }
+      });
+    });
+
+    // Deep linking: activate matching tab if hash is present in URL
+    const activateFromHash = () => {
+      const hash = (window.location.hash || "").replace("#", "").toLowerCase();
+      if (!hash) return;
+      const targetTab = tabs.find((t) => {
+        const tabId = t.id.toLowerCase();
+        const ctrlId = (t.getAttribute("aria-controls") || "").toLowerCase();
+        return tabId === hash || ctrlId === hash || ctrlId === `panel-${hash}` || tabId === `tab-${hash}`;
+      });
+      if (targetTab) {
+        activateTab(targetTab);
+      }
+    };
+
+    activateFromHash();
+    window.addEventListener("hashchange", activateFromHash);
+  }
+
   const form = document.getElementById("contact-form");
   const note = document.getElementById("form-note");
   if (form && note) {
