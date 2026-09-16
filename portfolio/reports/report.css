@@ -273,3 +273,44 @@ tr:last-child td { border-bottom: none; }
 .live-link:hover {
   color: var(--ink);
 }
+
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 0.85rem;
+  border-radius: 0.85rem;
+  border: 1px solid var(--line);
+}
+
+.table-wrap table {
+  min-width: 660px;
+  border: none;
+  border-radius: 0;
+}
+
+.backlink-article {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+  font-size: 0.88rem;
+}
+
+.backlink-url {
+  display: inline-block;
+  font-size: 0.76rem;
+  color: var(--cyan);
+  word-break: break-all;
+  border-bottom: 1px dashed rgba(92, 225, 255, 0.4);
+}
+
+.anchor-badge {
+  display: inline-block;
+  background: rgba(92, 225, 255, 0.08);
+  border: 1px solid var(--line);
+  color: #fff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.78rem;
+}
