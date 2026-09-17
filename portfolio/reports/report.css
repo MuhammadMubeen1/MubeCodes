@@ -750,7 +750,7 @@ tr:last-child td { border-bottom: none; }
 
 .ads-screenshot__body {
   display: flex;
-  min-height: 280px;
+  min-height: 320px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 11px;
   line-height: 1.4;
@@ -961,5 +961,320 @@ tr:last-child td { border-bottom: none; }
   border-radius: 50%;
   background: rgba(66, 183, 42, 0.15);
   font-size: 0.55rem;
+}
+
+/* ── Realistic platform chrome (Meta / Google / TikTok) ── */
+.ads-platform-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.68rem;
+  border-bottom: 1px solid #dadde1;
+  background: #fff;
+  color: #1c1e21;
+}
+
+.ads-platform-bar--google {
+  border-bottom-color: #dadce0;
+  padding: 0.5rem 0.85rem;
+}
+
+.ads-platform-bar--tiktok {
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
+  color: #121212;
+}
+
+.ads-platform-bar__menu {
+  font-size: 0.85rem;
+  color: #65676b;
+  line-height: 1;
+}
+
+.ads-platform-bar__logo-meta {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #0081fb;
+  line-height: 1;
+}
+
+.ads-platform-bar__text {
+  font-weight: 600;
+  color: #1c1e21;
+}
+
+.ads-platform-bar__spacer { flex: 1; }
+
+.ads-platform-bar__account,
+.ads-platform-bar__date {
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccd0d5;
+  background: #f5f6f7;
+  font-size: 0.62rem;
+  color: #444;
+}
+
+.ads-google-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: #5f6368;
+}
+
+.ads-google-mark i {
+  font-style: normal;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: conic-gradient(#ea4335 0deg 90deg, #34a853 90deg 180deg, #4285f4 180deg 270deg, #fbbc04 270deg 360deg);
+  color: transparent;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ads-google-mark strong {
+  color: #202124;
+  font-weight: 500;
+}
+
+.ads-tiktok-mark {
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: -0.02em;
+}
+
+.ads-tiktok-mark span { color: #fe2c55; }
+
+.ads-tab-bar {
+  display: flex;
+  gap: 0;
+  padding: 0 0.75rem;
+  background: #fff;
+  border-bottom: 1px solid #dadde1;
+}
+
+.ads-tab-bar--google { border-bottom-color: #dadce0; }
+.ads-tab-bar--tiktok { border-bottom-color: #ebebeb; }
+
+.ads-tab {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.65rem;
+  color: #65676b;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.ads-tab--active {
+  color: #1877f2;
+  border-bottom-color: #1877f2;
+  font-weight: 600;
+}
+
+.ads-tab-bar--google .ads-tab--active {
+  color: #1a73e8;
+  border-bottom-color: #1a73e8;
+}
+
+.ads-tab-bar--tiktok .ads-tab--active {
+  color: #fe2c55;
+  border-bottom-color: #fe2c55;
+}
+
+.ads-screenshot--meta .ads-screenshot__body { background: #f0f2f5; }
+.ads-screenshot--google .ads-screenshot__body { background: #fff; }
+.ads-screenshot--tiktok .ads-screenshot__body { background: #fafafa; color: #121212; }
+
+.ads-screenshot--tiktok .ads-screenshot__sidebar {
+  background: #fff;
+  border-right: 1px solid #ebebeb;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__nav-item { color: #666; }
+.ads-screenshot--tiktok .ads-screenshot__nav-item--active {
+  background: #fff0f3;
+  color: #fe2c55;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__account-bar {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  color: #121212;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__metric {
+  background: #fff;
+  border: 1px solid #ebebeb;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__metric strong { color: #121212; }
+.ads-screenshot--tiktok .ads-screenshot__chart {
+  background: #fff;
+  border: 1px solid #ebebeb;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__table {
+  background: #fff;
+  border: 1px solid #ebebeb;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__table th {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__table td {
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.ads-screenshot--tiktok .ads-screenshot__date-pill {
+  background: #f5f5f5;
+  color: #555;
+}
+
+.ads-screenshot__sidebar {
+  width: 148px;
+  padding: 0.5rem 0;
+}
+
+.ads-sidebar-icon {
+  display: inline-block;
+  width: 14px;
+  text-align: center;
+  margin-right: 0.35rem;
+  opacity: 0.75;
+  font-size: 0.62rem;
+}
+
+.ads-screenshot__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ads-btn-create {
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.28rem 0.55rem;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+}
+
+.ads-btn-create--meta { background: #1877f2; }
+.ads-btn-create--google { background: #1a73e8; border-radius: 999px; padding: 0.32rem 0.75rem; }
+.ads-btn-create--tiktok { background: #fe2c55; border-radius: 4px; }
+
+.ads-placements {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.15rem;
+}
+
+.ads-placement {
+  font-size: 0.52rem;
+  padding: 0.08rem 0.28rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.ads-placement--fb { background: #e7f3ff; color: #1877f2; }
+.ads-placement--ig { background: #ffeef3; color: #e1306c; }
+.ads-placement--wa { background: #e8f8ef; color: #25d366; }
+.ads-placement--msg { background: #e7f3ff; color: #0084ff; }
+
+.ads-delivery-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: #31a24c;
+}
+
+.ads-delivery-pill--google {
+  color: #137333;
+  background: #e6f4ea;
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+}
+
+.ads-screenshot__table .col-check {
+  width: 18px;
+  padding-right: 0.25rem;
+}
+
+.ads-screenshot__table .fake-check {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #bcc0c4;
+  border-radius: 2px;
+  background: #fff;
+  vertical-align: middle;
+}
+
+.ads-screenshot__table .fake-toggle {
+  display: inline-block;
+  width: 26px;
+  height: 14px;
+  border-radius: 999px;
+  background: #1877f2;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+.ads-screenshot__table .fake-toggle::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.ads-screenshot__chart-line {
+  stroke: #1877f2;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.ads-screenshot--google .ads-screenshot__chart-line { stroke: #1a73e8; }
+.ads-screenshot--tiktok .ads-screenshot__chart-line { stroke: #fe2c55; }
+
+.ads-screenshot__chart-area {
+  fill: rgba(24, 119, 242, 0.12);
+}
+
+.ads-screenshot--google .ads-screenshot__chart-area { fill: rgba(26, 115, 232, 0.1); }
+.ads-screenshot--tiktok .ads-screenshot__chart-area { fill: rgba(254, 44, 85, 0.1); }
+
+.ads-screenshot__account-bar {
+  border: 1px solid #dadde1;
+  border-radius: 8px;
+}
+
+.ads-screenshot--google .ads-screenshot__account-bar { border-color: #dadce0; }
+
+.ads-screenshot__metric {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.ads-screenshot__table td:first-child {
+  font-weight: 500;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
