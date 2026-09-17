@@ -229,87 +229,6 @@
       gap: 1rem;
     }
 
-    /* Metrics Strip */
-    .seo-metrics {
-      max-width: var(--max);
-      margin: 0 auto 3.5rem;
-      padding: 0 1.25rem;
-    }
-    .seo-metrics__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      background: rgba(10, 15, 24, 0.65);
-      border: 1px solid var(--seo-card-border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      backdrop-filter: var(--glass-blur);
-    }
-    .seo-metric-card {
-      text-align: center;
-      padding: 1rem 0.75rem;
-      border-right: 1px solid rgba(61, 184, 255, 0.1);
-    }
-    .seo-metric-card:last-child {
-      border-right: none;
-    }
-    .seo-metric-card strong {
-      display: block;
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 0.35rem;
-      background: linear-gradient(135deg, #ffffff 40%, var(--seo-cyan) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .seo-metric-card span {
-      font-size: 0.85rem;
-      color: var(--ink-muted);
-      font-weight: 500;
-    }
-
-    /* Media Proof Badges */
-    .media-proof {
-      max-width: var(--max);
-      margin: 0 auto 3.5rem;
-      padding: 0 1.25rem;
-      text-align: center;
-    }
-    .media-proof__label {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--seo-cyan);
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-    }
-    .media-proof__tags {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.65rem;
-    }
-    .media-tag {
-      font-family: var(--font-display);
-      font-size: 0.88rem;
-      font-weight: 700;
-      padding: 0.45rem 1rem;
-      background: rgba(10, 15, 24, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 999px;
-      color: rgba(244, 247, 251, 0.8);
-      letter-spacing: 0.02em;
-      transition: all 0.2s ease;
-    }
-    .media-tag:hover {
-      border-color: rgba(61, 184, 255, 0.35);
-      color: #fff;
-      transform: translateY(-2px);
-    }
-
     /* Filter Toolbar */
     .filter-section {
       max-width: var(--max);
@@ -937,7 +856,6 @@
       <span class="client-nav__tag">SEO Portfolio</span>
     </a>
     <nav class="client-nav__links" aria-label="Portfolio Navigation">
-      <a href="#metrics">Overview</a>
       <a href="#case-studies">18+ Case Studies</a>
       <a href="#deliverables">Audit Samples</a>
       <a href="#methodology">5-Pillar System</a>
@@ -991,54 +909,7 @@
 
         <div class="seo-hero__actions">
           <a href="#case-studies" class="btn btn--primary">Explore 18+ Client Case Studies ↓</a>
-          <a href="portfolio/reports/seo-audit.html" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">View Sample SEO Audit ↗</a>
         </div>
-      </div>
-    </section>
-
-    <!-- Key Metrics Strip -->
-    <section class="seo-metrics" id="metrics" aria-label="Performance proof">
-      <div class="seo-metrics__grid">
-        <div class="seo-metric-card">
-          <strong>500K+</strong>
-          <span>Monthly Organic Visits</span>
-        </div>
-        <div class="seo-metric-card">
-          <strong>45,000+</strong>
-          <span>Verified Backlinks Built</span>
-        </div>
-        <div class="seo-metric-card">
-          <strong>#1 Ranks</strong>
-          <span>In High-Competition Niches</span>
-        </div>
-        <div class="seo-metric-card">
-          <strong>8+ Countries</strong>
-          <span>Global Search Markets</span>
-        </div>
-        <div class="seo-metric-card">
-          <strong>5.1x</strong>
-          <span>Avg. Organic Revenue ROAS</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- High-DA Editorial Authority Placements -->
-    <section class="media-proof">
-      <p class="media-proof__label">Verified High-Authority Referring Domains &amp; Media Mentions</p>
-      <div class="media-proof__tags">
-        <span class="media-tag">Forbes</span>
-        <span class="media-tag">NYT Wirecutter</span>
-        <span class="media-tag">The Guardian</span>
-        <span class="media-tag">BBC News</span>
-        <span class="media-tag">TechCrunch</span>
-        <span class="media-tag">Vogue UK</span>
-        <span class="media-tag">Los Angeles Times</span>
-        <span class="media-tag">Variety</span>
-        <span class="media-tag">Eater</span>
-        <span class="media-tag">Architectural Digest</span>
-        <span class="media-tag">Wikipedia</span>
-        <span class="media-tag">Marham.pk</span>
-        <span class="media-tag">Dawn News</span>
       </div>
     </section>
 
