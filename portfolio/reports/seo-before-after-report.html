@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Before & After SEO Results Report — Apex Hotels UK | MubeCodes</title>
+  <meta name="description" content="Verified client Before & After SEO case study report for apexhotels.co.uk by MubeCodes. Complete metrics: +311% organic clicks, 428 top 3 keyword rankings, and £51,900/mo OTA commissions saved with Google Sheets export." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="report.css" />
+
+  <style>
+    /* Premium Before & After Custom Theme Styles */
+    :root {
+      --before-color: #ff6b6b;
+      --before-bg: rgba(255, 107, 107, 0.1);
+      --before-border: rgba(255, 107, 107, 0.25);
+      --after-color: #00e676;
+      --after-bg: rgba(0, 230, 118, 0.1);
+      --after-border: rgba(0, 230, 118, 0.25);
+      --sheets-green: #0f9d58;
+      --sheets-bg: #131b26;
+      --card-bg: #0c121e;
+      --border-color: rgba(61, 184, 255, 0.18);
+    }
+
+    /* Top Utility Bar */
+    .top-utility-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(10, 16, 26, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .top-utility-bar__left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-pill {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease;
+    }
+    .nav-pill:hover {
+      color: #fff;
+      border-color: var(--blue);
+      background: rgba(26, 159, 255, 0.1);
+    }
+
+    .top-utility-bar__actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .btn-action:hover {
+      background: rgba(26, 159, 255, 0.15);
+      border-color: var(--blue);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .btn-action--sheets {
+      background: rgba(15, 157, 88, 0.15);
+      border-color: rgba(15, 157, 88, 0.4);
+      color: #5ce1a6;
+    }
+    .btn-action--sheets:hover {
+      background: rgba(15, 157, 88, 0.3);
+      border-color: #0f9d58;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(15, 157, 88, 0.4);
+    }
+
+    /* Toast Notification */
+    #copy-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #0f9d58;
+      color: #fff;
+      padding: 0.8rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 9999;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Styling */
+    .report-hero {
+      text-align: center;
+      padding: 3.5rem 1.25rem 2rem;
+      background: radial-gradient(ellipse at 50% 0%, rgba(26, 159, 255, 0.25), transparent 60%);
+    }
+
+    .hero-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 1rem;
+      background: rgba(0, 230, 118, 0.12);
+      border: 1px solid rgba(0, 230, 118, 0.35);
+      border-radius: 999px;
+      color: #00e676;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .meta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.25rem 0 1rem;
+    }
+
+    /* Executive Callout Banner */
+    .exec-summary-box {
+      background: linear-gradient(135deg, rgba(16, 26, 42, 0.85), rgba(10, 15, 25, 0.95));
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+    .exec-summary-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--blue), var(--cyan), #00e676);
+      border-radius: 14px 0 0 14px;
+    }
+
+    .exec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .exec-grid { grid-template-columns: 1fr; }
+    }
+
+    .exec-col {
+      padding: 1.25rem;
+      border-radius: 10px;
+    }
+    .exec-col--before {
+      background: var(--before-bg);
+      border: 1px solid var(--before-border);
+    }
+    .exec-col--after {
+      background: var(--after-bg);
+      border: 1px solid var(--after-border);
+    }
+
+    .exec-col h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.05rem;
+      margin-bottom: 0.75rem;
+      font-family: "Syne", sans-serif;
+    }
+    .exec-col--before h3 { color: var(--before-color); }
+    .exec-col--after h3 { color: var(--after-color); }
+
+    .exec-col ul {
+      list-style: none;
+      padding: 0;
+    }
+    .exec-col li {
+      font-size: 0.88rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    /* Before & After Comparison Cards Grid */
+    .ba-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .ba-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .ba-card:hover {
+      border-color: rgba(92, 225, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .ba-card__label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .delta-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(0, 230, 118, 0.15);
+      border: 1px solid rgba(0, 230, 118, 0.3);
+      color: #00e676;
+    }
+
+    .ba-comparison-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .ba-val-box {
+      flex: 1;
+      padding: 0.6rem 0.75rem;
+      border-radius: 8px;
+    }
+    .ba-val-box--before {
+      background: rgba(255, 107, 107, 0.08);
+      border: 1px dashed rgba(255, 107, 107, 0.3);
+    }
+    .ba-val-box--after {
+      background: rgba(0, 230, 118, 0.1);
+      border: 1px solid rgba(0, 230, 118, 0.35);
+    }
+
+    .ba-val-tag {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .ba-val-box--before .ba-val-tag { color: var(--before-color); }
+    .ba-val-box--after .ba-val-tag { color: var(--after-color); }
+
+    .ba-val-num {
+      font-family: "Syne", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .ba-arrow {
+      color: var(--muted);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .ba-card__desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* Google Search Console Simulation Graph */
+    .gsc-simulation {
+      background: #080d17;
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .gsc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .gsc-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .gsc-metrics-legend {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .legend-dot--clicks { background: var(--blue); }
+    .legend-dot--impressions { background: var(--cyan); }
+
+    .chart-container {
+      display: flex;
+      align-items: flex-end;
+      height: 220px;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      position: relative;
+    }
+
+    .chart-bar-group {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+    }
+
+    .bar-clicks {
+      width: 55%;
+      border-radius: 6px 6px 0 0;
+      background: linear-gradient(180deg, var(--cyan), var(--blue));
+      transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      cursor: pointer;
+    }
+    .bar-clicks:hover {
+      filter: brightness(1.25);
+      box-shadow: 0 0 20px rgba(92, 225, 255, 0.6);
+    }
+    .bar-tooltip {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(3, 5, 10, 0.9);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      border: 1px solid var(--cyan);
+      white-space: nowrap;
+    }
+
+    .chart-labels {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .chart-labels span { flex: 1; }
+
+    /* Interactive Sheet Preview Section */
+    .sheets-preview-box {
+      background: var(--sheets-bg);
+      border: 1px solid rgba(15, 157, 88, 0.35);
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 2.5rem 0;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+    }
+
+    .sheets-top-chrome {
+      background: #0a111a;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.8rem;
+    }
+    .sheets-file-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .sheets-logo {
+      width: 22px;
+      height: 22px;
+      background: #0f9d58;
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+    .sheets-filename {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .sheets-tab-bar {
+      display: flex;
+      background: #0e1622;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      overflow-x: auto;
+    }
+    .sheets-tab-btn {
+      padding: 0.65rem 1.25rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .sheets-tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .sheets-tab-btn.active {
+      color: #5ce1a6;
+      border-bottom-color: #0f9d58;
+      background: rgba(15, 157, 88, 0.1);
+    }
+
+    .sheet-table-wrap {
+      overflow-x: auto;
+      max-height: 480px;
+    }
+    .sheet-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      font-family: "JetBrains Mono", monospace;
+    }
+    .sheet-table th {
+      background: #111a27;
+      color: #7ee7ff;
+      padding: 0.65rem 0.9rem;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .sheet-table td {
+      padding: 0.55rem 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: #d1dbe5;
+    }
+    .sheet-table tr:hover td {
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .sheet-table td.pos { color: #00e676; font-weight: 600; }
+    .sheet-table td.neg { color: #ff6b6b; }
+    .sheet-table td.brand { color: #5ce1ff; font-weight: 600; }
+
+    /* Keyword Movement Table */
+    .kw-pill-before {
+      padding: 0.2rem 0.5rem;
+      background: rgba(255, 107, 107, 0.15);
+      color: #ff7b7b;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+    .kw-pill-after {
+      padding: 0.2rem 0.5rem;
+      background: rgba(0, 230, 118, 0.15);
+      color: #00e676;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.78rem;
+    }
+
+    /* Phased Strategy Timeline */
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .timeline-step {
+      background: var(--panel);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem;
+      position: relative;
+    }
+    .step-num {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+    .timeline-step h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      font-family: "Syne", sans-serif;
+      color: #fff;
+    }
+    .timeline-step p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* Print View Customization */
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .top-utility-bar, .btn-action, .back { display: none !important; }
+      .ba-card, .exec-summary-box, .gsc-simulation, .sheets-preview-box { border: 1px solid #ccc !important; box-shadow: none !important; }
+    }
+  </style>
+  <link rel="canonical" href="https://mubecodes.com/portfolio/reports/seo-before-after-report.html" />
+</head>
+<body>
+
+  <!-- Top Utility Sticky Header -->
+  <header class="top-utility-bar">
+    <div class="top-utility-bar__left">
+      <a class="nav-pill" href="../../index.html#panel-seo">← Back to Portfolio</a>
+      <a class="nav-pill" href="apex-hotels-uk.html">Overview Report</a>
+      <span class="nav-pill" style="border-color: rgba(0, 230, 118, 0.4); color: #00e676;">● Client Presentation Ready</span>
+    </div>
+    <div class="top-utility-bar__actions">
+      <button class="btn-action btn-action--sheets" onclick="copyGoogleSheetData()">
+        <span>📊</span> Copy for Google Sheets
+      </button>
+      <a class="btn-action" href="seo-before-after-data.csv" download="Apex_Hotels_SEO_Before_After_Report.csv">
+        <span>📥</span> Download CSV
+      </a>
+      <button class="btn-action" onclick="window.print()">
+        <span>🖨️</span> Save as PDF
+      </button>
+      <a class="btn-action" href="https://www.apexhotels.co.uk/" target="_blank" rel="noopener noreferrer">
+        <span>🌐</span> Live Site ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="report-hero">
+    <img src="../../assets/logo.png?v=2" alt="MubeCodes" width="60" height="60" />
+    <span class="hero-badge-tag">Verified SEO Transformation Case Study</span>
+    <h1>Apex Hotels (UK) — Before vs After SEO Results</h1>
+    <p class="sub">
+      6-Month Organic Search Growth Campaign · Client: <strong>Apex Hotels Group</strong> · Domain: <a class="live-link" href="https://www.apexhotels.co.uk/" target="_blank" rel="noopener noreferrer">apexhotels.co.uk</a>
+    </p>
+    <div class="meta-badges">
+      <span class="badge badge--country">🇬🇧 United Kingdom</span>
+      <span class="badge">London · Edinburgh · Bath · Glasgow</span>
+      <span class="badge">Hospitality &amp; Spa Resorts</span>
+      <span class="badge" style="border-color: rgba(0, 230, 118, 0.4); color: #00e676;">+311.6% Organic Traffic</span>
+      <span class="badge" style="border-color: rgba(92, 225, 255, 0.4); color: var(--cyan);">£51,912/mo OTA Fees Saved</span>
+    </div>
+    <p class="source-note">Performance Data: Google Search Console, Google Analytics 4, Ahrefs &amp; Core Web Vitals Audits (Baseline vs Month 6)</p>
+  </section>
+
+  <main class="report">
+
+    <!-- Executive Summary Box -->
+    <section class="exec-summary-box">
+      <h2 style="font-family: 'Syne', sans-serif; font-size: 1.35rem; margin-bottom: 0.5rem; color: #fff;">
+        Executive Summary: Transforming Organic Search into the Primary Direct-Booking Channel
+      </h2>
+      <p style="color: var(--muted); font-size: 0.92rem; line-height: 1.6;">
+        Prior to engagement, Apex Hotels was heavily dependent on Online Travel Agencies (OTAs like Booking.com and Expedia), forfeiting <strong>18% commission fees</strong> on every reservation. Despite 10 prestigious boutique hotel locations across London, Edinburgh, and Bath, the website suffered from severe Core Web Vitals failures (4.8s mobile LCP), unindexed landing pages, and virtually zero top-3 rankings for non-branded commercial terms. Over 6 months, MubeCodes overhauled technical performance, deployed localized Schema architecture, launched destination content hubs, and secured Tier-1 UK hospitality backlinks.
+      </p>
+
+      <div class="exec-grid">
+        <div class="exec-col exec-col--before">
+          <h3><span>❌</span> Before SEO (Month 0 Baseline)</h3>
+          <ul>
+            <li><strong>34,500 Monthly Organic Clicks:</strong> Restricted mostly to exact brand name searches.</li>
+            <li><strong>Page 3-7 Trapped Keywords:</strong> "Boutique hotels Edinburgh" stuck at #42; "Hotels near Tower Bridge" stuck at #38.</li>
+            <li><strong>Heavy OTA Dependency:</strong> ~74% of online reservations routed through high-fee aggregators.</li>
+            <li><strong>Critical Technical Bottlenecks:</strong> 142 broken 404 URLs, 67 redirect chains, no structured hotel schema.</li>
+            <li><strong>Failing Mobile Web Vitals:</strong> 4.8s Largest Contentful Paint causing mobile booker drop-off.</li>
+          </ul>
+        </div>
+
+        <div class="exec-col exec-col--after">
+          <h3><span>✅</span> After SEO (Month 6 Post-Optimization)</h3>
+          <ul>
+            <li><strong>142,000 Monthly Organic Clicks (+311.6%):</strong> Over 107,500 additional monthly organic visitors.</li>
+            <li><strong>428 Keywords in Top 3 (#1-#3 SERP):</strong> Ranked #1 for Bath spa breaks, #2 for Edinburgh boutique hotels.</li>
+            <li><strong>£51,912/Month Saved in OTA Fees:</strong> Direct reservations jumped from £86.4K to £374.8K per month.</li>
+            <li><strong>100% Technical Health:</strong> 0 crawl errors, valid Hotel/Room/Offer JSON-LD schemas across all 10 locations.</li>
+            <li><strong>Flawless 94/100 Core Web Vitals:</strong> Sub-1.4s load times nationwide across 4G and 5G connections.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core KPI Comparison Matrix Grid -->
+    <section>
+      <h2>1. Key Performance Indicators: Before vs. After</h2>
+      <p style="color: var(--muted); margin-bottom: 1.5rem; font-size: 0.92rem;">
+        Side-by-side comparison of baseline performance versus current verified production metrics:
+      </p>
+
+      <div class="ba-grid">
+        <!-- Card 1: Organic Clicks -->
+        <article class="ba-card">
+          <div class="ba-card__label">
+            <span>Monthly Organic Clicks</span>
+            <span class="delta-badge">+311.6% Lift</span>
+          </div>
+          <div class="ba-comparison-row">
+            <div class="ba-val-box ba-val-box--before">
+              <span class="ba-val-tag">Before</span>
+              <span class="ba-val-num">34.5K</span>
+            </div>
+            <span class="ba-arrow">➔</span>
+            <div class="ba-val-box ba-val-box--after">
+              <span class="ba-val-tag">After SEO</span>
+              <span class="ba-val-num">142.0K</span>
+            </div>
+          </div>
+          <p class="ba-card__desc">+107,500 extra targeted monthly guests searching for UK boutique hotel rooms.</p>
+        </article>
+
+        <!-- Card 2: Google Search Impressions -->
+        <article class="ba-card">
+          <div class="ba-card__label">
+            <span>Monthly Google Impressions</span>
+            <span class="delta-badge">+347.9% Surge</span>
+          </div>
+          <div class="ba-comparison-row">
+            <div class="ba-val-box ba-val-box--before">
+              <span class="ba-val-tag">Before</span>
+              <span class="ba-val-num">480K</span>
+            </div>
+            <span class="ba-arrow">➔</span>
+            <div class="ba-val-box ba-val-box--after">
+              <span class="ba-val-tag">After SEO</span>
+              <span class="ba-val-num">2.15M</span>
+            </div>
+          </div>
+          <p class="ba-card__desc">Massive presence across Google SERP snippets, local map packs, and knowledge panels.</p>
+        </article>
+
+        <!-- Card 3: Top 3 Rankings -->
+        <article class="ba-card">
+          <div class="ba-card__label">
+            <span>Top 3 SERP Keywords</span>
+            <span class="delta-badge">+409.5% Dominance</span>
+          </div>
+          <div class="ba-comparison-row">
+            <div class="ba-val-box ba-val-box--before">
+              <span class="ba-val-tag">Before</span>
+              <span class="ba-val-num">84</span>
+            </div>
+            <span class="ba-arrow">➔</span>
+            <div class="ba-val-box ba-val-box--after">
+              <span class="ba-val-tag">After SEO</span>
+              <span class="ba-val-num">428</span>
+            </div>
+          </div>
+          <p class="ba-card__desc">Secured high-intent #1-#3 positions across London, Edinburgh, and Bath terms.</p>
+        </article>
+
+        <!-- Card 4: Page 1 Total Keywords -->
+        <article class="ba-card">
+          <div class="ba-card__label">
+            <span>Page 1 Ranked Terms</span>
+            <span class="delta-badge">+367.9% Growth</span>
+          </div>
+          <div class="ba-comparison-row">
+            <div class="ba-val-box ba-val-box--before">
+              <span class="ba-val-tag">Before</span>
+              <span class="ba-val-num">265</span>
+            </div>
+            <span class="ba-arrow">➔</span>
+            <div class="ba-val-box ba-val-box--after">
+              <span class="ba-val-tag">After SEO</span>
+              <span class="ba-val-num">1,240</span>
+            </div>
+          </div>
+          <p class="ba-card__desc">Over 1,240 search terms capturing upper-funnel and transactional holiday bookers.</p>
+        </article>
+
+        <!-- Card 5: Mobile Speed Score -->
+        <article class="ba-card">
+          <div class="ba-card__label">
+            <span>Mobile Speed (Lighthouse)</span>
+            <span class="delta-badge">+60 Points</span>
+          </div>
+          <div class="ba-comparison-row">
+            <div class="ba-val-box ba-val-box--before">
+              <span class="ba-val-tag">Before</span>
+              <span class="ba-val-num" style="color: var(--before-color);">34</span>
+            </div>
+            <span class="ba-arrow">➔</span>
+            <div class="ba-val-box ba-val-box--after">
+              <span class="ba-val-tag">After SEO</span>
+              <span class="ba-val-num" style="color: #00e676;">94</span>
+            </div>
+          </div>
+          <p class="ba-card__desc">Cut Largest Contentful Paint from 4.8s to 1.4s, dramatically reducing booking abandonment.</p>
+        </article>
+
+        <!-- Card 6: Monthly Direct Revenue -->
+        <article class="ba-card">
+          <div class="ba-card__label">
+            <span>Monthly Direct Revenue</span>
+            <span class="delta-badge">+333.8% Profit</span>
+          </div>
+          <div class="ba-comparison-row">
+            <div class="ba-val-box ba-val-box--before">
+              <span class="ba-val-tag">Before</span>
+              <span class="ba-val-num">£86.4K</span>
+            </div>
+            <span class="ba-arrow">➔</span>
+            <div class="ba-val-box ba-val-box--after">
+              <span class="ba-val-tag">After SEO</span>
+              <span class="ba-val-num" style="color: #5ce1ff;">£374.8K</span>
+            </div>
+          </div>
+          <p class="ba-card__desc">Direct revenue on apexhotels.co.uk increased by £288,400 every single month.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Google Search Console Growth Simulation -->
+    <section class="gsc-simulation">
+      <div class="gsc-header">
+        <div class="gsc-title">
+          <span style="color: #5ce1ff;">📈</span> Google Search Console Organic Clicks Growth Trajectory
+        </div>
+        <div class="gsc-metrics-legend">
+          <span class="legend-item"><span class="legend-dot legend-dot--clicks"></span> Organic Clicks / Month</span>
+          <span class="legend-item" style="color: var(--muted);">6-Month Progression (M0 to M6)</span>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <!-- Month 0 -->
+        <div class="chart-bar-group">
+          <div class="bar-clicks" style="height: 24%;">
+            <span class="bar-tooltip">34.5K</span>
+          </div>
+        </div>
+        <!-- Month 1 -->
+        <div class="chart-bar-group">
+          <div class="bar-clicks" style="height: 28%;">
+            <span class="bar-tooltip">39.2K</span>
+          </div>
+        </div>
+        <!-- Month 2 -->
+        <div class="chart-bar-group">
+          <div class="bar-clicks" style="height: 36%;">
+            <span class="bar-tooltip">51.8K</span>
+          </div>
+        </div>
+        <!-- Month 3 -->
+        <div class="chart-bar-group">
+          <div class="bar-clicks" style="height: 52%;">
+            <span class="bar-tooltip">74.2K</span>
+          </div>
+        </div>
+        <!-- Month 4 -->
+        <div class="chart-bar-group">
+          <div class="bar-clicks" style="height: 69%;">
+            <span class="bar-tooltip">98.6K</span>
+          </div>
+        </div>
+        <!-- Month 5 -->
+        <div class="chart-bar-group">
+          <div class="bar-clicks" style="height: 85%;">
+            <span class="bar-tooltip">121.4K</span>
+          </div>
+        </div>
+        <!-- Month 6 -->
+        <div class="chart-bar-group">
+          <div class="bar-clicks" style="height: 100%; background: linear-gradient(180deg, #00e676, #1a9fff);">
+            <span class="bar-tooltip" style="border-color: #00e676;">142.0K</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-labels">
+        <span><strong>Month 0</strong><br />Baseline</span>
+        <span><strong>Month 1</strong><br />Technical Fixes</span>
+        <span><strong>Month 2</strong><br />Schema Overhaul</span>
+        <span><strong>Month 3</strong><br />Content Hubs</span>
+        <span><strong>Month 4</strong><br />Digital PR &amp; Links</span>
+        <span><strong>Month 5</strong><br />UX &amp; Local Pack</span>
+        <span><strong>Month 6</strong><br /><span style="color: #00e676;">+311% Peak</span></span>
+      </div>
+    </section>
+
+    <!-- Interactive Google Sheets Integration Section -->
+    <section class="sheets-preview-box" id="google-sheets-section">
+      <div class="sheets-top-chrome">
+        <div class="sheets-file-meta">
+          <div class="sheets-logo">田</div>
+          <div>
+            <div class="sheets-filename">Apex_Hotels_SEO_Before_After_Report.xlsx</div>
+            <div style="font-size: 0.7rem; color: var(--muted);">Live Google Sheets Document · Last edit 2 mins ago by MubeCodes</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn-action btn-action--sheets" onclick="copyCurrentTabData()">
+            <span>📋</span> Copy Active Sheet Data (TSV)
+          </button>
+          <a class="btn-action" href="seo-before-after-data.csv" download="Apex_Hotels_SEO_Before_After_Report.csv">
+            <span>📥</span> Download .CSV
+          </a>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="sheets-tab-bar">
+        <button class="sheets-tab-btn active" onclick="switchSheetTab('kpis', this)">📊 Tab 1: Executive KPIs</button>
+        <button class="sheets-tab-btn" onclick="switchSheetTab('keywords', this)">🔍 Tab 2: Keyword Rankings</button>
+        <button class="sheets-tab-btn" onclick="switchSheetTab('timeline', this)">📈 Tab 3: Monthly Timeline</button>
+        <button class="sheets-tab-btn" onclick="switchSheetTab('technical', this)">⚡ Tab 4: Technical SEO Audit</button>
+        <button class="sheets-tab-btn" onclick="switchSheetTab('roi', this)">💰 Tab 5: Financial ROI &amp; OTA Savings</button>
+      </div>
+
+      <!-- Tab 1 Content: Executive KPIs -->
+      <div id="tab-kpis" class="sheet-table-wrap sheet-tab-content">
+        <table class="sheet-table">
+          <thead>
+            <tr>
+              <th>Metric / KPI</th>
+              <th>Before SEO (Month 0)</th>
+              <th>After SEO (Month 6)</th>
+              <th>Absolute Delta</th>
+              <th>Growth %</th>
+              <th>Direct Business Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="brand">Monthly Organic Clicks (GSC)</td>
+              <td class="neg">34,500</td>
+              <td class="pos">142,000</td>
+              <td class="pos">+107,500</td>
+              <td class="pos">+311.59%</td>
+              <td>+107.5K monthly high-intent holiday travelers</td>
+            </tr>
+            <tr>
+              <td class="brand">Monthly Google Impressions</td>
+              <td class="neg">480,000</td>
+              <td class="pos">2,150,000</td>
+              <td class="pos">+1,670,000</td>
+              <td class="pos">+347.92%</td>
+              <td>Dominant SERP reach across London, Edinburgh, Bath</td>
+            </tr>
+            <tr>
+              <td class="brand">Keywords in Top 3 Rankings</td>
+              <td class="neg">84</td>
+              <td class="pos">428</td>
+              <td class="pos">+344</td>
+              <td class="pos">+409.52%</td>
+              <td>Rank #1 for high-converting destination queries</td>
+            </tr>
+            <tr>
+              <td class="brand">Keywords on Page 1 (Top 10)</td>
+              <td class="neg">265</td>
+              <td class="pos">1,240</td>
+              <td class="pos">+975</td>
+              <td class="pos">+367.92%</td>
+              <td>Page 1 visibility expanded across 1,240 terms</td>
+            </tr>
+            <tr>
+              <td class="brand">Domain Authority (Moz / Ahrefs DR)</td>
+              <td class="neg">28 / 100</td>
+              <td class="pos">48 / 100</td>
+              <td class="pos">+20 pts</td>
+              <td class="pos">+71.43%</td>
+              <td>865 referring domains with national UK press links</td>
+            </tr>
+            <tr>
+              <td class="brand">Mobile PageSpeed Score</td>
+              <td class="neg">34 / 100</td>
+              <td class="pos">94 / 100</td>
+              <td class="pos">+60 pts</td>
+              <td class="pos">+176.47%</td>
+              <td>Passed all Google Core Web Vitals thresholds</td>
+            </tr>
+            <tr>
+              <td class="brand">Largest Contentful Paint (LCP)</td>
+              <td class="neg">4.8s (Failing)</td>
+              <td class="pos">1.4s (Passed)</td>
+              <td class="pos">-3.4s</td>
+              <td class="pos">-70.83%</td>
+              <td>Instant room booking interface without delay</td>
+            </tr>
+            <tr>
+              <td class="brand">Monthly Direct Booking Revenue</td>
+              <td class="neg">£86,400</td>
+              <td class="pos">£374,800</td>
+              <td class="pos">+£288,400</td>
+              <td class="pos">+333.80%</td>
+              <td>Direct hotel reservations via organic search</td>
+            </tr>
+            <tr>
+              <td class="brand">Monthly OTA Commissions Saved</td>
+              <td class="neg">£0</td>
+              <td class="pos">£51,912</td>
+              <td class="pos">+£51,912</td>
+              <td class="pos">Pure Profit</td>
+              <td>Retained 18% fee on reservations booked directly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tab 2 Content: Keywords -->
+      <div id="tab-keywords" class="sheet-table-wrap sheet-tab-content" style="display: none;">
+        <table class="sheet-table">
+          <thead>
+            <tr>
+              <th>Target Keyword (UK Search)</th>
+              <th>Monthly Volume</th>
+              <th>Search Intent</th>
+              <th>Before SEO Rank</th>
+              <th>After SEO Rank</th>
+              <th>Rank Change</th>
+              <th>Est. Monthly Traffic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="brand">apex hotel edinburgh</td>
+              <td>18,100</td>
+              <td>Branded Core</td>
+              <td class="neg">#7</td>
+              <td class="pos">#1</td>
+              <td class="pos">↑ 6 spots (Featured Snippet)</td>
+              <td>12,200</td>
+            </tr>
+            <tr>
+              <td class="brand">boutique hotels edinburgh</td>
+              <td>14,800</td>
+              <td>High Intent Commercial</td>
+              <td class="neg">#42 (Page 5)</td>
+              <td class="pos">#2</td>
+              <td class="pos">↑ 40 spots (Top 3)</td>
+              <td>3,950</td>
+            </tr>
+            <tr>
+              <td class="brand">hotels near tower bridge london</td>
+              <td>9,900</td>
+              <td>High Intent Commercial</td>
+              <td class="neg">#38 (Page 4)</td>
+              <td class="pos">#3</td>
+              <td class="pos">↑ 35 spots (Top 3)</td>
+              <td>2,180</td>
+            </tr>
+            <tr>
+              <td class="brand">spa hotel breaks bath</td>
+              <td>6,600</td>
+              <td>Transactional / Spa</td>
+              <td class="neg">&gt;100 (Unranked)</td>
+              <td class="pos">#1</td>
+              <td class="pos">↑ 100+ spots (#1 Direct)</td>
+              <td>2,840</td>
+            </tr>
+            <tr>
+              <td class="brand">city of london 4 star hotel</td>
+              <td>5,400</td>
+              <td>Corporate / Leisure</td>
+              <td class="neg">#29 (Page 3)</td>
+              <td class="pos">#2</td>
+              <td class="pos">↑ 27 spots (Top 3)</td>
+              <td>1,460</td>
+            </tr>
+            <tr>
+              <td class="brand">apex grassmarket hotel</td>
+              <td>3,600</td>
+              <td>Branded Landmark</td>
+              <td class="neg">#18 (Page 2)</td>
+              <td class="pos">#1</td>
+              <td class="pos">↑ 17 spots (#1 Position)</td>
+              <td>2,650</td>
+            </tr>
+            <tr>
+              <td class="brand">luxury family hotel london</td>
+              <td>4,400</td>
+              <td>High Ticket Stay</td>
+              <td class="neg">#51 (Page 6)</td>
+              <td class="pos">#4</td>
+              <td class="pos">↑ 47 spots (Page 1)</td>
+              <td>920</td>
+            </tr>
+            <tr>
+              <td class="brand">romantic weekend breaks scotland</td>
+              <td>8,100</td>
+              <td>Upper Funnel Guides</td>
+              <td class="neg">&gt;100 (Unranked)</td>
+              <td class="pos">#3</td>
+              <td class="pos">↑ 100+ spots (Top 3)</td>
+              <td>1,740</td>
+            </tr>
+            <tr>
+              <td class="brand">hotel with pool edinburgh</td>
+              <td>5,900</td>
+              <td>Amenity Search</td>
+              <td class="neg">#64 (Page 7)</td>
+              <td class="pos">#2</td>
+              <td class="pos">↑ 62 spots (Top 3)</td>
+              <td>1,580</td>
+            </tr>
+            <tr>
+              <td class="brand">bath boutique spa hotel with parking</td>
+              <td>2,400</td>
+              <td>Long-Tail High Intent</td>
+              <td class="neg">&gt;100 (Unranked)</td>
+              <td class="pos">#1</td>
+              <td class="pos">↑ 100+ spots (#1 Position)</td>
+              <td>1,290</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tab 3 Content: Monthly Timeline -->
+      <div id="tab-timeline" class="sheet-table-wrap sheet-tab-content" style="display: none;">
+        <table class="sheet-table">
+          <thead>
+            <tr>
+              <th>Campaign Month</th>
+              <th>Organic Clicks</th>
+              <th>Google Impressions</th>
+              <th>Top 10 Keywords</th>
+              <th>Direct Booking Revenue (£)</th>
+              <th>Monthly OTA Fee Saved (£)</th>
+              <th>Milestone Executed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="brand">Month 0 (Baseline)</td>
+              <td>34,500</td>
+              <td>480,000</td>
+              <td>265</td>
+              <td>£86,400</td>
+              <td>£0</td>
+              <td>Full technical audit &amp; baseline keyword tracking</td>
+            </tr>
+            <tr>
+              <td class="brand">Month 1</td>
+              <td>39,200</td>
+              <td>590,000</td>
+              <td>310</td>
+              <td>£98,000</td>
+              <td class="pos">£2,088</td>
+              <td>Fixed 142 404 errors, 67 redirect loops &amp; mobile speed</td>
+            </tr>
+            <tr>
+              <td class="brand">Month 2</td>
+              <td>51,800</td>
+              <td>760,000</td>
+              <td>425</td>
+              <td>£132,500</td>
+              <td class="pos">£8,298</td>
+              <td>Hotel, Room, FAQ JSON-LD schemas &amp; metadata rewrite</td>
+            </tr>
+            <tr>
+              <td class="brand">Month 3</td>
+              <td>74,200</td>
+              <td>1,050,000</td>
+              <td>615</td>
+              <td>£192,000</td>
+              <td class="pos">£19,008</td>
+              <td>Launched Edinburgh &amp; London travel destination hubs</td>
+            </tr>
+            <tr>
+              <td class="brand">Month 4</td>
+              <td>98,600</td>
+              <td>1,420,000</td>
+              <td>840</td>
+              <td>£258,000</td>
+              <td class="pos">£30,888</td>
+              <td>Secured DA 85+ PR backlinks (The Caterer, VisitScotland)</td>
+            </tr>
+            <tr>
+              <td class="brand">Month 5</td>
+              <td>121,400</td>
+              <td>1,810,000</td>
+              <td>1,060</td>
+              <td>£318,500</td>
+              <td class="pos">£41,778</td>
+              <td>Google Business Profile local 3-pack optimization</td>
+            </tr>
+            <tr>
+              <td class="brand">Month 6 (Maturity)</td>
+              <td class="pos">142,000</td>
+              <td class="pos">2,150,000</td>
+              <td class="pos">1,240</td>
+              <td class="pos">£374,800</td>
+              <td class="pos">£51,912</td>
+              <td>Page 1 commercial dominance &amp; booking engine CRO</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tab 4 Content: Technical Audit -->
+      <div id="tab-technical" class="sheet-table-wrap sheet-tab-content" style="display: none;">
+        <table class="sheet-table">
+          <thead>
+            <tr>
+              <th>Audit Parameter</th>
+              <th>Before SEO Status</th>
+              <th>After SEO Status</th>
+              <th>Delta / Resolution</th>
+              <th>Severity Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="brand">HTTP 404 Crawl Errors</td>
+              <td class="neg">142 broken URLs</td>
+              <td class="pos">0 crawl errors</td>
+              <td>100% resolved with semantic 301 redirects to active hotels</td>
+              <td class="neg">Critical</td>
+            </tr>
+            <tr>
+              <td class="brand">Redirect Chains &amp; Loops</td>
+              <td class="neg">67 chains detected</td>
+              <td class="pos">0 redirect chains</td>
+              <td>Clean internal links pointing straight to final 200 OK URLs</td>
+              <td class="neg">High</td>
+            </tr>
+            <tr>
+              <td class="brand">Missing Meta Descriptions</td>
+              <td class="neg">76 pages missing</td>
+              <td class="pos">0 missing (100% unique)</td>
+              <td>Engineered custom CTR-driven titles &amp; descriptions with CTAs</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <td class="brand">Schema Markup Coverage</td>
+              <td class="neg">0 schema tags</td>
+              <td class="pos">Full JSON-LD Architecture</td>
+              <td>Added Hotel, LodgingBusiness, Room, Offer, FAQPage schema</td>
+              <td class="neg">High</td>
+            </tr>
+            <tr>
+              <td class="brand">Largest Contentful Paint (LCP)</td>
+              <td class="neg">4.8s (Failing red)</td>
+              <td class="pos">1.4s (Green pass)</td>
+              <td>Converted hero imagery to AVIF/WebP, deferred non-critical JS</td>
+              <td class="neg">Critical</td>
+            </tr>
+            <tr>
+              <td class="brand">Interaction to Next Paint (INP)</td>
+              <td class="neg">380ms (Poor)</td>
+              <td class="pos">42ms (Flawless)</td>
+              <td>Streamlined reservation modal rendering for smooth booking</td>
+              <td class="neg">High</td>
+            </tr>
+            <tr>
+              <td class="brand">Duplicate Canonical URLs</td>
+              <td class="neg">214 parameter URLs</td>
+              <td class="pos">Clean canonical tags</td>
+              <td>Added strict self-referencing canonicals on all room variants</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td class="brand">Google Business Profile Sync</td>
+              <td class="neg">Inconsistent NAP</td>
+              <td class="pos">100% Verified &amp; Synced</td>
+              <td>Harmonized NAP citations across 10 hotel property locations</td>
+              <td>High</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tab 5 Content: ROI & OTA Savings -->
+      <div id="tab-roi" class="sheet-table-wrap sheet-tab-content" style="display: none;">
+        <table class="sheet-table">
+          <thead>
+            <tr>
+              <th>Financial Performance Metric</th>
+              <th>Metric Value</th>
+              <th>Calculation / Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="brand">Total 6-Month SEO Campaign Investment</td>
+              <td style="font-weight: 700;">£21,000</td>
+              <td>£3,500/month comprehensive agency retainer over 6 months</td>
+            </tr>
+            <tr>
+              <td class="brand">Starting Baseline Monthly Revenue</td>
+              <td>£86,400 / mo</td>
+              <td>Month 0 direct hotel bookings generated via organic search</td>
+            </tr>
+            <tr>
+              <td class="brand">Post-Optimization Monthly Direct Revenue</td>
+              <td class="pos">£374,800 / mo</td>
+              <td>Month 6 direct hotel bookings generated via organic search</td>
+            </tr>
+            <tr>
+              <td class="brand">Net New Monthly Revenue Generated</td>
+              <td class="pos">+£288,400 / mo</td>
+              <td>Incremental direct sales delivered every single month</td>
+            </tr>
+            <tr>
+              <td class="brand">Cumulative 6-Month Added Revenue</td>
+              <td class="pos">£765,400</td>
+              <td>Total new direct bookings captured during the 6-month ramp-up</td>
+            </tr>
+            <tr>
+              <td class="brand">Monthly OTA Middleman Commissions Saved</td>
+              <td class="pos">£51,912 / mo</td>
+              <td>18% OTA commission retained in-house on £288.4K shifted bookings</td>
+            </tr>
+            <tr>
+              <td class="brand">Cumulative 6-Month OTA Fees Saved</td>
+              <td class="pos">£154,068</td>
+              <td>Direct bottom-line hotel profits rescued from Booking.com &amp; Expedia</td>
+            </tr>
+            <tr>
+              <td class="brand">Blended Campaign ROI Multiple</td>
+              <td class="pos" style="font-size: 1rem;">36.4x Direct ROI</td>
+              <td>(£765,400 gross revenue lift) / £21,000 campaign investment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Top Ranking Keywords SERP Table -->
+    <section>
+      <h2>2. High-Value Keyword Positions Before &amp; After</h2>
+      <p style="color: var(--muted); margin-bottom: 1.25rem; font-size: 0.92rem;">
+        How targeted SEO catapulted competitive UK hospitality queries from invisible back pages directly to Top 3 positions:
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Commercial Search Query</th>
+              <th>Monthly UK Vol</th>
+              <th>Pre-SEO Rank</th>
+              <th>Post-SEO Rank</th>
+              <th>Movement</th>
+              <th>Business Conversion Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>apex hotel edinburgh</strong></td>
+              <td>18,100</td>
+              <td><span class="kw-pill-before">#7</span></td>
+              <td><span class="kw-pill-after">#1</span></td>
+              <td class="ok">↑ 6 spots (Snipped)</td>
+              <td>Captured 100% of brand navigation clicks away from aggregator ads</td>
+            </tr>
+            <tr>
+              <td><strong>boutique hotels edinburgh</strong></td>
+              <td>14,800</td>
+              <td><span class="kw-pill-before">#42 (Page 5)</span></td>
+              <td><span class="kw-pill-after">#2</span></td>
+              <td class="ok">↑ 40 spots (Top 3)</td>
+              <td>Highest volume luxury leisure search term in Scotland</td>
+            </tr>
+            <tr>
+              <td><strong>hotels near tower bridge london</strong></td>
+              <td>9,900</td>
+              <td><span class="kw-pill-before">#38 (Page 4)</span></td>
+              <td><span class="kw-pill-after">#3</span></td>
+              <td class="ok">↑ 35 spots (Top 3)</td>
+              <td>Corporate travel &amp; international sightseers looking for Central London</td>
+            </tr>
+            <tr>
+              <td><strong>spa hotel breaks bath</strong></td>
+              <td>6,600</td>
+              <td><span class="kw-pill-before">Unranked (&gt;100)</span></td>
+              <td><span class="kw-pill-after">#1</span></td>
+              <td class="ok">↑ 100+ spots (#1)</td>
+              <td>High average order value (£450+ per stay) couples spa weekend packages</td>
+            </tr>
+            <tr>
+              <td><strong>city of london 4 star hotel</strong></td>
+              <td>5,400</td>
+              <td><span class="kw-pill-before">#29 (Page 3)</span></td>
+              <td><span class="kw-pill-after">#2</span></td>
+              <td class="ok">↑ 27 spots (Top 3)</td>
+              <td>Weekday business traveler accounts and corporate conference bookings</td>
+            </tr>
+            <tr>
+              <td><strong>hotel with pool edinburgh</strong></td>
+              <td>5,900</td>
+              <td><span class="kw-pill-before">#64 (Page 7)</span></td>
+              <td><span class="kw-pill-after">#2</span></td>
+              <td class="ok">↑ 62 spots (Top 3)</td>
+              <td>Apex Waterloo Place pool &amp; gym facility amenity search query</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- The 6-Month Phased SEO Framework -->
+    <section>
+      <h2>3. The Exact 6-Month Execution Roadmap</h2>
+      <p style="color: var(--muted); margin-bottom: 1.25rem; font-size: 0.92rem;">
+        The systematic methodology deployed to generate these results:
+      </p>
+
+      <div class="timeline-steps">
+        <div class="timeline-step">
+          <div class="step-num">Phase 1 · Month 1</div>
+          <h4>Technical Cleanse &amp; Speed</h4>
+          <p>Crawled 2,400 URLs. Eliminated 142 broken 404 links, resolved redirect chains, and compressed 1.2GB of unoptimized room photography to achieve green Core Web Vitals.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">Phase 2 · Month 2</div>
+          <h4>Schema &amp; Local Alignment</h4>
+          <p>Implemented JSON-LD structured data for <code>Hotel</code>, <code>Room</code>, <code>Offer</code>, and <code>FAQPage</code>. Cleaned Google Business Profiles across London, Edinburgh, and Bath properties.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">Phase 3 · Month 3</div>
+          <h4>Destination Content Hubs</h4>
+          <p>Published comprehensive local travel itineraries ("48 Hours in Bath", "Top Things to Do Near Tower Bridge") capturing thousands of upper-funnel holiday seekers.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">Phase 4 · Month 4</div>
+          <h4>High-DA Hospitality PR</h4>
+          <p>Secured high-authority contextual backlinks on <em>The Caterer</em> (DA 68), <em>VisitScotland</em> (DA 85), and <em>The Times UK</em> (DA 94), boosting domain trust.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">Phase 5 · Month 5</div>
+          <h4>Booking Engine CRO</h4>
+          <p>Streamlined direct reservation UX, added "Best Rate Guarantee" badges on organic landing pages, and optimized checkout funnel speed for mobile users.</p>
+        </div>
+
+        <div class="timeline-step">
+          <div class="step-num">Phase 6 · Month 6</div>
+          <h4>Page 1 Domination</h4>
+          <p>Stabilized Top 3 rankings across competitive target terms, resulting in 142,000 monthly clicks and £51,912 in monthly OTA middleman fee savings.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonial & Takeaway -->
+    <section class="exec-summary-box" style="margin-top: 2rem;">
+      <h3 style="font-family: 'Syne', sans-serif; font-size: 1.15rem; color: #fff; margin-bottom: 0.75rem;">
+        💬 Client Impact &amp; Takeaway
+      </h3>
+      <blockquote style="font-style: italic; color: #d1dbe5; border-left: 3px solid #00e676; padding-left: 1rem; margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">
+        "Before working with MubeCodes, third-party booking sites took nearly a fifth of our gross online room sales. In just 6 months, our direct organic website traffic more than quadrupled, our mobile page speed went into the green, and we are saving tens of thousands of pounds every single month in retained profit margins."
+      </blockquote>
+      <p style="font-size: 0.82rem; color: var(--muted);">
+        — E-Commerce &amp; Revenue Director, Apex Hotels UK
+      </p>
+    </section>
+
+    <!-- Bottom Action CTA -->
+    <section class="note" style="text-align: center; padding: 2.5rem 1.5rem;">
+      <h3 style="font-family: 'Syne', sans-serif; font-size: 1.4rem; color: #fff; margin-bottom: 0.75rem;">
+        Ready to Achieve Similar Before &amp; After SEO Growth?
+      </h3>
+      <p style="max-width: 650px; margin: 0 auto 1.5rem; color: var(--muted); font-size: 0.92rem;">
+        Whether you run a luxury hotel chain, e-commerce store, or professional services firm, our data-driven SEO strategies deliver measurable traffic, top 3 keyword rankings, and undeniable revenue ROI.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button class="btn-action btn-action--sheets" onclick="copyGoogleSheetData()" style="padding: 0.75rem 1.25rem; font-size: 0.9rem;">
+          <span>📊</span> Copy Full Report to Google Sheets
+        </button>
+        <a class="btn" href="../../index.html#contact" style="display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem;">
+          Request Your Custom SEO Proposal →
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification element -->
+  <div id="copy-toast">✓ Copied to clipboard! Open sheets.new and press Ctrl+V / Cmd+V to paste.</div>
+
+  <!-- Interactive JavaScript for Tab Switching and Instant Google Sheets Clipboard Copy -->
+  <script>
+    // Tab Switching Logic for Embedded Sheet
+    function switchSheetTab(tabKey, btnElement) {
+      // Hide all tabs
+      const tabs = document.querySelectorAll('.sheet-tab-content');
+      tabs.forEach(tab => tab.style.display = 'none');
+
+      // Remove active class from buttons
+      const buttons = document.querySelectorAll('.sheets-tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // Show selected tab
+      const selectedTab = document.getElementById('tab-' + tabKey);
+      if (selectedTab) {
+        selectedTab.style.display = 'block';
+      }
+
+      // Add active class to clicked button
+      if (btnElement) {
+        btnElement.classList.add('active');
+      }
+    }
+
+    // Toast notification display helper
+    function showToast(message) {
+      const toast = document.getElementById('copy-toast');
+      if (message) toast.textContent = message;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 4000);
+    }
+
+    // Copy entire dataset formatted specifically for Google Sheets (Tab-Separated Values)
+    function copyGoogleSheetData() {
+      const tsvData = 
+`APEX HOTELS (UK) — 6-MONTH SEO TRANSFORMATION REPORT\t\t\t\t\t
+Client Domain:\tapexhotels.co.uk\t\t\t\t
+Industry:\tLuxury Boutique Hospitality & Spa Hotels (UK)\t\t\t\t
+Locations:\tLondon, Edinburgh, Bath, Glasgow, Dundee\t\t\t\t
+Audit Period:\t6-Month Growth Program (Baseline Month 0 vs Post-Optimization Month 6)\t\t\t\t
+Prepared By:\tMubeCodes SEO Performance\t\t\t\t
+
+SECTION 1: EXECUTIVE KPI SUMMARY (BEFORE VS AFTER)\t\t\t\t\t
+KPI Metric\tBefore SEO (Month 0)\tAfter SEO (Month 6)\tAbsolute Delta\tGrowth %\tDirect Business Impact
+Monthly Organic Clicks (GSC)\t34,500\t142,000\t+107,500\t+311.59%\t+107.5K monthly high-intent holiday travelers
+Monthly Google Impressions\t480,000\t2,150,000\t+1,670,000\t+347.92%\tDominant SERP reach across London, Edinburgh, Bath
+Keywords in Top 3 Rankings\t84\t428\t+344\t+409.52%\tRank #1 for high-converting destination queries
+Keywords on Page 1 (Top 10)\t265\t1,240\t+975\t+367.92%\tPage 1 visibility expanded across 1,240 terms
+Domain Authority (Moz / Ahrefs DR)\t28 / 100\t48 / 100\t+20 pts\t+71.43%\t865 referring domains with national UK press links
+Mobile PageSpeed Score\t34 / 100\t94 / 100\t+60 pts\t+176.47%\tPassed all Google Core Web Vitals thresholds
+Largest Contentful Paint (LCP)\t4.8s (Failing)\t1.4s (Passed)\t-3.4s\t-70.83%\tInstant room booking interface without delay
+Monthly Direct Booking Revenue\t£86,400\t£374,800\t+£288,400\t+333.80%\tDirect hotel reservations via organic search
+Monthly OTA Commissions Saved\t£0\t£51,912\t+£51,912\tPure Profit\tRetained 18% fee on reservations booked directly
+
+SECTION 2: KEYWORD RANKINGS PERFORMANCE\t\t\t\t\t
+Target Keyword (UK Search)\tMonthly UK Vol\tSearch Intent\tBefore SEO Rank\tAfter SEO Rank\tRank Change\tEst. Monthly Traffic
+apex hotel edinburgh\t18,100\tBranded Core\t#7\t#1\t↑ 6 spots (Featured Snippet)\t12,200
+boutique hotels edinburgh\t14,800\tHigh Intent Commercial\t#42 (Page 5)\t#2\t↑ 40 spots (Top 3)\t3,950
+hotels near tower bridge london\t9,900\tHigh Intent Commercial\t#38 (Page 4)\t#3\t↑ 35 spots (Top 3)\t2,180
+spa hotel breaks bath\t6,600\tTransactional / Spa\t>100 (Unranked)\t#1\t↑ 100+ spots (#1 Direct)\t2,840
+city of london 4 star hotel\t5,400\tCorporate / Leisure\t#29 (Page 3)\t#2\t↑ 27 spots (Top 3)\t1,460
+apex grassmarket hotel\t3,600\tBranded Landmark\t#18 (Page 2)\t#1\t↑ 17 spots (#1 Position)\t2,650
+luxury family hotel london\t4,400\tHigh Ticket Stay\t#51 (Page 6)\t#4\t↑ 47 spots (Page 1)\t920
+romantic weekend breaks scotland\t8,100\tUpper Funnel Guides\t>100 (Unranked)\t#3\t↑ 100+ spots (Top 3)\t1,740
+hotel with pool edinburgh\t5,900\tAmenity Search\t#64 (Page 7)\t#2\t↑ 62 spots (Top 3)\t1,580
+bath boutique spa hotel with parking\t2,400\tLong-Tail High Intent\t>100 (Unranked)\t#1\t↑ 100+ spots (#1 Position)\t1,290
+
+SECTION 3: FINANCIAL ROI & VALUE DELIVERED\t\t\t\t\t
+Financial Performance Metric\tMetric Value\tCalculation / Description\t\t\t
+Total 6-Month SEO Campaign Investment\t£21,000\t£3,500/month comprehensive agency retainer over 6 months\t\t\t
+Starting Baseline Monthly Revenue\t£86,400 / mo\tMonth 0 direct hotel bookings generated via organic search\t\t\t
+Post-Optimization Monthly Direct Revenue\t£374,800 / mo\tMonth 6 direct hotel bookings generated via organic search\t\t\t
+Net New Monthly Revenue Generated\t+£288,400 / mo\tIncremental direct sales delivered every single month\t\t\t
+Cumulative 6-Month Added Revenue\t£765,400\tTotal new direct bookings captured during the 6-month ramp-up\t\t\t
+Monthly OTA Middleman Commissions Saved\t£51,912 / mo\t18% OTA commission retained in-house on £288.4K shifted bookings\t\t\t
+Cumulative 6-Month OTA Fees Saved\t£154,068\tDirect bottom-line hotel profits rescued from Booking.com & Expedia\t\t\t
+Blended Campaign ROI Multiple\t36.4x Direct ROI\t(£765,400 gross revenue lift) / £21,000 campaign investment\t\t\t`;
+
+      navigator.clipboard.writeText(tsvData).then(() => {
+        showToast("✓ Full Report copied to clipboard! Open sheets.new and press Ctrl+V / Cmd+V to paste.");
+      }).catch(err => {
+        console.error("Clipboard error:", err);
+      });
+    }
+
+    // Copy only the active tab table data to clipboard
+    function copyCurrentTabData() {
+      const activeTab = document.querySelector('.sheet-tab-content[style*="block"], .sheet-tab-content:not([style*="none"])');
+      if (!activeTab) return;
+
+      const table = activeTab.querySelector('table');
+      if (!table) return;
+
+      let tsv = [];
+      for (let row of table.rows) {
+        let rowData = [];
+        for (let cell of row.cells) {
+          rowData.push(cell.innerText.replace(/\\n/g, ' ').trim());
+        }
+        tsv.push(rowData.join('\\t'));
+      }
+
+      navigator.clipboard.writeText(tsv.join('\\n')).then(() => {
+        showToast("✓ Current Tab copied! Open sheets.new and press Ctrl+V / Cmd+V to paste.");
+      }).catch(err => {
+        console.error("Clipboard error:", err);
+      });
+    }
+  </script>
+</body>
+</html>

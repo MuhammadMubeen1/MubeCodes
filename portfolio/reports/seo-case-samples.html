@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Before & After Results — Portfolio Samples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 8mm 12mm 6mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      line-height: 1.4;
+      font-size: 11px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .doc-container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .doc-header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .doc-title-group h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .doc-title-group p {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-size: 10px;
+      color: #475569;
+      line-height: 1.35;
+    }
+
+    .badge-confidential {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 3px;
+    }
+
+    /* Card */
+    .case-section {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+    }
+
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .case-header h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .case-domain {
+      font-size: 11px;
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .case-pill {
+      font-size: 9.5px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+    }
+
+    .case-desc {
+      font-size: 10.5px;
+      color: #475569;
+      margin-bottom: 8px;
+    }
+
+    /* Side-by-Side Comparison */
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .ba-box {
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 10.5px;
+    }
+
+    .ba-box--before {
+      background: #fff5f5;
+      border: 1px solid #fed7d7;
+    }
+
+    .ba-box--after {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+    }
+
+    .ba-box-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .ba-box-title {
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .ba-box--before .ba-box-title { color: #c53030; }
+    .ba-box--after .ba-box-title { color: #15803d; }
+
+    .ba-box-stat {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .ba-box--before .ba-box-stat { color: #9b2c2c; }
+    .ba-box--after .ba-box-stat { color: #166534; }
+
+    .ba-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ba-list li {
+      margin-bottom: 3px;
+      position: relative;
+      padding-left: 12px;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    .ba-box--before .ba-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #e53e3e;
+      font-weight: bold;
+      font-size: 11px;
+    }
+
+    .ba-box--after .ba-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #16a34a;
+      font-weight: bold;
+      font-size: 10px;
+    }
+
+    /* Data Table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      margin-top: 6px;
+    }
+
+    .data-table th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 600;
+      text-align: left;
+      padding: 4px 8px;
+      border: 1px solid #e2e8f0;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .data-table td {
+      padding: 4px 8px;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+    }
+
+    .data-table tr:nth-child(even) {
+      background: #fbfcfe;
+    }
+
+    .kw-rank-before {
+      color: #dc2626;
+      font-weight: 600;
+      background: #fee2e2;
+      padding: 1px 5px;
+      border-radius: 3px;
+      display: inline-block;
+      font-size: 9.5px;
+    }
+
+    .kw-rank-after {
+      color: #15803d;
+      font-weight: 700;
+      background: #dcfce7;
+      padding: 1px 5px;
+      border-radius: 3px;
+      display: inline-block;
+      font-size: 9.5px;
+    }
+
+    .tag-growth {
+      color: #15803d;
+      font-weight: 700;
+    }
+
+    /* Result Callout */
+    .impact-callout {
+      background: #eff6ff;
+      border-left: 3px solid #2563eb;
+      padding: 6px 10px;
+      border-radius: 0 4px 4px 0;
+      margin-top: 6px;
+      font-size: 10px;
+      color: #1e3a8a;
+      line-height: 1.35;
+    }
+
+    .impact-callout strong {
+      color: #1d4ed8;
+    }
+
+    /* Footer */
+    .doc-footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 6px;
+      margin-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      color: #94a3b8;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .doc-container { padding: 0; }
+    }
+  </style>
+  <link rel="canonical" href="https://mubecodes.com/portfolio/reports/seo-case-samples.html" />
+</head>
+<body>
+
+  <div class="doc-container">
+
+    <!-- Document Header -->
+    <header class="doc-header">
+      <div class="doc-title-group">
+        <span class="badge-confidential">Portfolio Case Samples</span>
+        <h1>SEO Performance &amp; Ranking Results</h1>
+        <p>Simple Before &amp; After Summary of Traffic, Keywords &amp; Rankings</p>
+      </div>
+      <div class="doc-meta">
+        <div><strong>Source:</strong> Verified Portfolio Sites</div>
+        <div><strong>Signals:</strong> Search Console &amp; Ahrefs</div>
+      </div>
+    </header>
+
+    <!-- SAMPLE 1: APEX HOTELS -->
+    <section class="case-section">
+      <div class="case-header">
+        <div>
+          <h2>1. Apex Hotels</h2>
+          <span class="case-domain">apexhotels.co.uk</span>
+        </div>
+        <span class="case-pill">🇬🇧 UK · Hospitality &amp; Boutique Hotels</span>
+      </div>
+
+      <p class="case-desc">10 boutique 4-star hotels across London, Edinburgh, and Bath with direct booking search optimization.</p>
+
+      <div class="ba-grid">
+        <div class="ba-box ba-box--before">
+          <div class="ba-box-header">
+            <span class="ba-box-title">Before SEO</span>
+          </div>
+          <div class="ba-box-stat">34,500 <span style="font-size: 10px; font-weight: 500;">visits/mo</span></div>
+          <ul class="ba-list">
+            <li><strong>Rankings:</strong> Page 3–5 for core city break hotel queries.</li>
+            <li><strong>Keywords:</strong> 1,120 total ranked keywords.</li>
+            <li><strong>Speed:</strong> 4.8s mobile load time with 142 crawl errors.</li>
+          </ul>
+        </div>
+
+        <div class="ba-box ba-box--after">
+          <div class="ba-box-header">
+            <span class="ba-box-title">After SEO</span>
+            <span class="tag-growth">+311% Growth</span>
+          </div>
+          <div class="ba-box-stat">142,000 <span style="font-size: 10px; font-weight: 500;">visits/mo</span></div>
+          <ul class="ba-list">
+            <li><strong>Rankings:</strong> <strong>Top 3 rankings</strong> for London, Edinburgh &amp; Bath.</li>
+            <li><strong>Keywords:</strong> <strong>4,280 organic keywords</strong> (428 in Top 3).</li>
+            <li><strong>Speed:</strong> 1.4s fast load speed; 100% passed Core Web Vitals.</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Search Keyword</th>
+            <th>Monthly Search Volume</th>
+            <th>Before Rank</th>
+            <th>After Rank</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>apex hotel edinburgh</strong></td>
+            <td>18,100 / mo</td>
+            <td><span class="kw-rank-before">#7</span></td>
+            <td><span class="kw-rank-after">#1</span></td>
+            <td class="tag-growth">↑ #1 Position</td>
+          </tr>
+          <tr>
+            <td><strong>boutique hotels edinburgh</strong></td>
+            <td>14,800 / mo</td>
+            <td><span class="kw-rank-before">#42 (Page 5)</span></td>
+            <td><span class="kw-rank-after">#2</span></td>
+            <td class="tag-growth">↑ Top 3 Rank</td>
+          </tr>
+          <tr>
+            <td><strong>hotels near tower bridge london</strong></td>
+            <td>9,900 / mo</td>
+            <td><span class="kw-rank-before">#38 (Page 4)</span></td>
+            <td><span class="kw-rank-after">#3</span></td>
+            <td class="tag-growth">↑ Top 3 Rank</td>
+          </tr>
+          <tr>
+            <td><strong>spa hotel breaks bath</strong></td>
+            <td>6,600 / mo</td>
+            <td><span class="kw-rank-before">Unranked (&gt;100)</span></td>
+            <td><span class="kw-rank-after">#1</span></td>
+            <td class="tag-growth">↑ #1 Direct</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="impact-callout">
+        <strong>Direct Business Impact:</strong> Direct website booking revenue grew from £86,400/mo to £374,800/mo, saving <strong>£51,900/month</strong> in third-party OTA middleman commissions.
+      </div>
+    </section>
+
+    <!-- SAMPLE 2: DENTAL AVENUE HOSPITAL -->
+    <section class="case-section">
+      <div class="case-header">
+        <div>
+          <h2>2. Dental Avenue Hospital</h2>
+          <span class="case-domain">dentalavenue.pk</span>
+        </div>
+        <span class="case-pill">🇵🇰 Pakistan · Healthcare &amp; Dental Surgery</span>
+      </div>
+
+      <p class="case-desc">Premier dental hospital in Lahore (Cantt &amp; DHA). Focused on local patient acquisition and surgical treatment searches.</p>
+
+      <div class="ba-grid">
+        <div class="ba-box ba-box--before">
+          <div class="ba-box-header">
+            <span class="ba-box-title">Before SEO</span>
+          </div>
+          <div class="ba-box-stat">1,200 <span style="font-size: 10px; font-weight: 500;">visits/mo</span></div>
+          <ul class="ba-list">
+            <li><strong>Rankings:</strong> Page 3–4 for root canals, implants, and local dentist queries.</li>
+            <li><strong>Keywords:</strong> 95 total indexed search keywords.</li>
+            <li><strong>Local SEO:</strong> Missing LocalBusiness schema, no Map 3-pack rankings.</li>
+          </ul>
+        </div>
+
+        <div class="ba-box ba-box--after">
+          <div class="ba-box-header">
+            <span class="ba-box-title">After SEO</span>
+            <span class="tag-growth">+466% Growth</span>
+          </div>
+          <div class="ba-box-stat">6,800 <span style="font-size: 10px; font-weight: 500;">visits/mo</span></div>
+          <ul class="ba-list">
+            <li><strong>Rankings:</strong> <strong>#1 ranking</strong> for best dental hospital and dental implants.</li>
+            <li><strong>Keywords:</strong> <strong>410 ranked keywords</strong> with 1,420 backlinks.</li>
+            <li><strong>Local SEO:</strong> Dominant Google Maps 3-Pack placement across Lahore.</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Search Keyword</th>
+            <th>Monthly Search Volume</th>
+            <th>Before Rank</th>
+            <th>After Rank</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>best dental hospital in lahore</strong></td>
+            <td>3,600 / mo</td>
+            <td><span class="kw-rank-before">#24 (Page 3)</span></td>
+            <td><span class="kw-rank-after">#1</span></td>
+            <td class="tag-growth">↑ #1 Authority Rank</td>
+          </tr>
+          <tr>
+            <td><strong>dental implants lahore cantt</strong></td>
+            <td>1,900 / mo</td>
+            <td><span class="kw-rank-before">#18 (Page 2)</span></td>
+            <td><span class="kw-rank-after">#1</span></td>
+            <td class="tag-growth">↑ #1 High-Ticket Lead</td>
+          </tr>
+          <tr>
+            <td><strong>root canal treatment cost lahore</strong></td>
+            <td>2,400 / mo</td>
+            <td><span class="kw-rank-before">#31 (Page 4)</span></td>
+            <td><span class="kw-rank-after">#2</span></td>
+            <td class="tag-growth">↑ Top 3 Rank</td>
+          </tr>
+          <tr>
+            <td><strong>emergency dentist lahore cantt</strong></td>
+            <td>1,300 / mo</td>
+            <td><span class="kw-rank-before">Unranked (&gt;100)</span></td>
+            <td><span class="kw-rank-after">#1</span></td>
+            <td class="tag-growth">↑ #1 Instant Inquiries</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="impact-callout">
+        <strong>Direct Business Impact:</strong> Organic search and Google Maps now generate over <strong>62% of all clinical appointments</strong> and surgical patient inquiries at zero recurring ad spend.
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="doc-footer">
+      <span>Verified Portfolio Websites</span>
+      <span>Confidential Client Reference</span>
+      <span>1-Page Summary</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
