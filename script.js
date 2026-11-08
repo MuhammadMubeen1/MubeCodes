@@ -28,7 +28,44 @@
         mobile.hidden = true;
       });
     });
+
+    const mobileServices = mobile.querySelector(".nav-mobile__toggle");
+    const mobileSub = mobile.querySelector(".nav-mobile__sub");
+    if (mobileServices && mobileSub) {
+      mobileServices.addEventListener("click", () => {
+        const open = mobileServices.getAttribute("aria-expanded") === "true";
+        mobileServices.setAttribute("aria-expanded", String(!open));
+        mobileSub.hidden = open;
+      });
+    }
   }
+
+  document.querySelectorAll(".nav__drop-btn").forEach((button) => {
+    const item = button.closest(".nav__item");
+    if (!item) return;
+    button.addEventListener("click", () => {
+      const open = item.classList.toggle("is-open");
+      button.setAttribute("aria-expanded", String(open));
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    document.querySelectorAll(".nav__item.is-open").forEach((item) => {
+      if (item.contains(event.target)) return;
+      item.classList.remove("is-open");
+      const button = item.querySelector(".nav__drop-btn");
+      if (button) button.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    document.querySelectorAll(".nav__item.is-open").forEach((item) => {
+      item.classList.remove("is-open");
+      const button = item.querySelector(".nav__drop-btn");
+      if (button) button.setAttribute("aria-expanded", "false");
+    });
+  });
 
   const reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
