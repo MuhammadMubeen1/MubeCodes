@@ -2304,6 +2304,31 @@ video {
   line-height: 1.45;
 }
 
+.project > p.project__service {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.project__service a {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.svc .portfolio__tabs-wrapper {
+  margin: 0 0 1.5rem;
+}
+
+.svc .portfolio__grid {
+  margin-top: 1.25rem;
+}
+
 .project__tag--sample {
   color: #e7c98a;
   border-color: rgba(231, 201, 138, 0.45);

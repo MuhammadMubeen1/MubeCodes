@@ -29,15 +29,15 @@
       });
     });
 
-    const mobileServices = mobile.querySelector(".nav-mobile__toggle");
-    const mobileSub = mobile.querySelector(".nav-mobile__sub");
-    if (mobileServices && mobileSub) {
-      mobileServices.addEventListener("click", () => {
-        const open = mobileServices.getAttribute("aria-expanded") === "true";
-        mobileServices.setAttribute("aria-expanded", String(!open));
-        mobileSub.hidden = open;
+    mobile.querySelectorAll(".nav-mobile__toggle").forEach((btn) => {
+      const sub = btn.nextElementSibling;
+      if (!sub || !sub.classList.contains("nav-mobile__sub")) return;
+      btn.addEventListener("click", () => {
+        const open = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!open));
+        sub.hidden = open;
       });
-    }
+    });
   }
 
   document.querySelectorAll(".nav__drop-btn").forEach((button) => {
@@ -126,11 +126,23 @@
       });
     };
 
-    tabs.forEach((tab, index) => {
-      tab.addEventListener("click", () => activateTab(tab));
+    const openCategoryPage = (tab) => {
+      if (!tab.matches("a[href]")) return false;
+      const dest = new URL(tab.getAttribute("href"), window.location.href);
+      if (dest.pathname === window.location.pathname) return true;
+      window.location.href = tab.getAttribute("href");
+      return true;
+    };
 
-      // Keyboard arrow navigation
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        if (tab.matches("a[href]")) return;
+        activateTab(tab);
+      });
+
+      // Keyboard arrow navigation between in-page filters
       tab.addEventListener("keydown", (e) => {
+        if (tab.matches("a[href]")) return;
         let newIndex = null;
         if (e.key === "ArrowRight") {
           newIndex = (index + 1) % tabs.length;
@@ -150,18 +162,19 @@
       });
     });
 
-    // Deep linking: activate matching tab if hash is present in URL
+    // Deep linking: open the category page, or the matching in-page panel
     const activateFromHash = () => {
       const hash = (window.location.hash || "").replace("#", "").toLowerCase();
       if (!hash) return;
+      const key = hash.replace(/^panel-/, "").replace(/^tab-/, "");
       const targetTab = tabs.find((t) => {
         const tabId = t.id.toLowerCase();
         const ctrlId = (t.getAttribute("aria-controls") || "").toLowerCase();
-        return tabId === hash || ctrlId === hash || ctrlId === `panel-${hash}` || tabId === `tab-${hash}`;
+        return tabId === hash || ctrlId === hash || ctrlId === `panel-${hash}` || tabId === `tab-${key}`;
       });
-      if (targetTab) {
-        activateTab(targetTab);
-      }
+      if (!targetTab) return;
+      if (openCategoryPage(targetTab)) return;
+      activateTab(targetTab);
     };
 
     activateFromHash();

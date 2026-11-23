@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=22" />
+  <link rel="stylesheet" href="styles.css?v=23" />
 
   <!-- Schema.org JSON-LD: ProfessionalService / LocalBusiness -->
   <script type="application/ld+json">
@@ -233,9 +233,20 @@
           <a href="services/seo-aeo-geo.html" role="menuitem">SEO / AEO / GEO</a>
           <a class="nav__sub" href="services/local-seo.html" role="menuitem">Local SEO</a>
           <a href="services/ai-seo.html" role="menuitem">AI SEO</a>
+          <a href="services/whatsapp-leads.html" role="menuitem">WhatsApp Leads</a>
         </div>
       </div>
-      <a href="#portfolio">Portfolio</a>
+      <div class="nav__item">
+        <button class="nav__drop-btn" type="button" aria-expanded="false" aria-haspopup="true">Portfolio</button>
+        <div class="nav__menu" role="menu">
+          <a href="#portfolio" role="menuitem">All portfolio</a>
+          <a href="portfolio/websites.html" role="menuitem">Websites</a>
+          <a href="portfolio/seo.html" role="menuitem">Website SEO</a>
+          <a href="portfolio/apps.html" role="menuitem">Mobile Applications</a>
+          <a href="portfolio/aso.html" role="menuitem">ASO</a>
+          <a href="portfolio/ppc.html" role="menuitem">PPC &amp; Social Ads</a>
+        </div>
+      </div>
       <a href="#process">Process</a>
       <a href="#contact" class="nav__cta">Free Growth Call</a>
     </nav>
@@ -254,8 +265,17 @@
       <a href="services/seo-aeo-geo.html">SEO / AEO / GEO</a>
       <a class="nav__sub" href="services/local-seo.html">Local SEO</a>
       <a href="services/ai-seo.html">AI SEO</a>
+      <a href="services/whatsapp-leads.html">WhatsApp Leads</a>
     </div>
-    <a href="#portfolio">Portfolio</a>
+    <button class="nav-mobile__toggle" type="button" aria-expanded="false">Portfolio</button>
+    <div class="nav-mobile__sub" hidden>
+      <a href="#portfolio">All portfolio</a>
+      <a href="portfolio/websites.html">Websites</a>
+      <a href="portfolio/seo.html">Website SEO</a>
+      <a href="portfolio/apps.html">Mobile Applications</a>
+      <a href="portfolio/aso.html">ASO</a>
+      <a href="portfolio/ppc.html">PPC &amp; Social Ads</a>
+    </div>
     <a href="#process">Process</a>
     <a href="#contact">Free Growth Call</a>
   </div>
@@ -275,7 +295,7 @@
           <li><a href="services/seo-aeo-geo.html">SEO / AEO / GEO</a></li>
           <li><a href="services/local-seo.html">Local SEO</a></li>
           <li><a href="services/ai-seo.html">AI SEO</a></li>
-          <li><a href="#whatsapp-leads">WhatsApp leads</a></li>
+          <li><a href="services/whatsapp-leads.html">WhatsApp leads</a></li>
         </ul>
         <div class="hero__actions">
           <a href="#contact" class="btn btn--primary">Get Your Digital Solution</a>
@@ -456,6 +476,7 @@
             <li>Instant replies, menus, qualify &amp; human handoff</li>
             <li>CRM / sheet sync &amp; automated follow-up sequences</li>
           </ul>
+          <a class="service__more" href="services/whatsapp-leads.html">Roadmap and setup</a>
         </article>
         <article class="service reveal">
           <div class="service__icon" aria-hidden="true">
@@ -478,27 +499,17 @@
       <div class="section__head reveal">
         <p class="eyebrow">Portfolio</p>
         <h2>Featured Work &amp; Case Studies</h2>
-        <p class="section__sub">Client projects come first. Famous public sites are labeled sample audits, and traffic or ad figures that cannot be opened in a live account are not shown.</p>
+        <p class="section__sub">Client projects come first. Famous public sites are labeled sample audits, and traffic or ad figures that cannot be opened in a live account are not shown. Open a category to see every project with its report and service.</p>
       </div>
 
       <!-- 5-Tab Portfolio Navigation -->
       <div class="portfolio__tabs-wrapper reveal">
-        <div class="portfolio__tabs" role="tablist" aria-label="Portfolio Categories">
-          <button class="portfolio__tab is-active" role="tab" id="tab-websites" aria-selected="true" aria-controls="panel-websites" tabindex="0">
-            Websites <span class="portfolio__tab-count">19</span>
-          </button>
-          <button class="portfolio__tab" role="tab" id="tab-seo" aria-selected="false" aria-controls="panel-seo" tabindex="-1">
-            Website SEO <span class="portfolio__tab-count">19</span>
-          </button>
-          <button class="portfolio__tab" role="tab" id="tab-apps" aria-selected="false" aria-controls="panel-apps" tabindex="-1">
-            Mobile Applications <span class="portfolio__tab-count">12</span>
-          </button>
-          <button class="portfolio__tab" role="tab" id="tab-aso" aria-selected="false" aria-controls="panel-aso" tabindex="-1">
-            ASO <span class="portfolio__tab-count">10</span>
-          </button>
-          <button class="portfolio__tab" role="tab" id="tab-ppc" aria-selected="false" aria-controls="panel-ppc" tabindex="-1">
-            PPC &amp; Social Ads <span class="portfolio__tab-count">8</span>
-          </button>
+        <div class="portfolio__tabs" aria-label="Portfolio categories">
+          <a class="portfolio__tab is-active" href="portfolio/websites.html" id="tab-websites">Websites <span class="portfolio__tab-count">19</span></a>
+          <a class="portfolio__tab" href="portfolio/seo.html" id="tab-seo">Website SEO <span class="portfolio__tab-count">21</span></a>
+          <a class="portfolio__tab" href="portfolio/apps.html" id="tab-apps">Mobile Applications <span class="portfolio__tab-count">12</span></a>
+          <a class="portfolio__tab" href="portfolio/aso.html" id="tab-aso">ASO <span class="portfolio__tab-count">10</span></a>
+          <a class="portfolio__tab" href="portfolio/ppc.html" id="tab-ppc">PPC &amp; Social Ads <span class="portfolio__tab-count">8</span></a>
         </div>
       </div>
 
@@ -762,733 +773,6 @@
         </div>
       </div>
 
-      <!-- Tab Panel 2: Website SEO -->
-      <div class="portfolio__panel" id="panel-seo" role="tabpanel" aria-labelledby="tab-seo" hidden>
-        <div class="portfolio__panel-header reveal">
-          <h3 class="portfolio__label">Website SEO &amp; Traffic Reports</h3>
-          <p class="portfolio__intro">Notes on client sites and sample audits. Open the live site to see the work. These cards do not claim a traffic or ranking number.</p>
-        </div>
-        <div class="portfolio__grid">
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">Healthcare SEO</span>
-            </div>
-            <h3>Dental Avenue Hospital</h3>
-            <p>dentalavenue.pk — Lahore dental hospital website for treatments, specialist profiles, and appointment booking.</p>
-            <div class="project__links">
-              <a href="https://dentalavenue.pk/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/dental-avenue.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇸🇬 Singapore</span>
-              <span class="project__tag">Luxury E‑commerce</span>
-            </div>
-            <h3>Lovingly Signed</h3>
-            <p>lovinglysigned.com.sg — Personalized baby gifts and hampers store.</p>
-            <div class="project__links">
-              <a href="https://lovinglysigned.com.sg/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/lovingly-signed.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">Tech &amp; B2B SEO</span>
-            </div>
-            <h3>IT Online</h3>
-            <p>itonline.pk — Pakistan's cash automation &amp; tech hardware store dominating Page 1 for commercial equipment.</p>
-            <div class="project__links">
-              <a href="https://itonline.pk/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/itonline-pk.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">Travel &amp; OTA SEO</span>
-            </div>
-            <h3>Trips.pk (Trrips.pk)</h3>
-            <p>trrips.pk — Tours, Umrah, visas, and flight pages.</p>
-            <div class="project__links">
-              <a href="https://trrips.pk/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/trrips-pk.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">Real estate</span>
-            </div>
-            <h3>Blue World City</h3>
-            <p>blueworldcity.com — Housing project site with plot search and booking pages.</p>
-            <div class="project__links">
-              <a href="https://blueworldcity.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/blue-world-city.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">News media</span>
-            </div>
-            <h3>Suno News</h3>
-            <p>sunonews.tv — Urdu news portal with 738 indexed search keywords &amp; 138 referring domains.</p>
-            <div class="project__links">
-              <a href="https://sunonews.tv/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/suno-news.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">Education</span>
-            </div>
-            <h3>Extensive Education</h3>
-            <p>extensiveedu.com — MBBS &amp; study abroad consultant with high engagement, growth upside.</p>
-            <div class="project__links">
-              <a href="https://extensiveedu.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/extensive-edu.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">Local SEO</span>
-            </div>
-            <h3>Rizthetics</h3>
-            <p>rizthetics.com — aesthetic clinic ranking for laser, PRP &amp; skin treatments in Lahore.</p>
-            <div class="project__links">
-              <a href="https://www.rizthetics.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/rizthetics.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇦🇪 UAE</span>
-              <span class="project__tag">Community</span>
-            </div>
-            <h3>The Female Network Dubai</h3>
-            <p>thefemalenetworkdubai.com — Dubai women’s network with Time Out feature &amp; app-driven growth.</p>
-            <div class="project__links">
-              <a href="https://thefemalenetworkdubai.com" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/tfnd-dubai.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Hospitality</span>
-            </div>
-            <h3>Apex Hotels</h3>
-            <p>apexhotels.co.uk — 10 boutique 4-star hotels across London, Edinburgh &amp; Bath with direct-booking SEO.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://www.apexhotels.co.uk/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/apex-hotels-uk.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇦🇪 UAE</span>
-              <span class="project__tag">Hospitality SEO</span>
-            </div>
-            <h3>Al Khoory Hotels</h3>
-            <p>alkhooryhotels.com — Public hotel site used as a sample audit.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://alkhooryhotels.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/al-khoory-hotels.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Sustainable E‑com</span>
-            </div>
-            <h3>The Tartan Blanket Co.</h3>
-            <p>tartanblanketco.com — Public store used as a sample audit.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://tartanblanketco.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/tartan-blanket-uk.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Holiday Lettings</span>
-            </div>
-            <h3>Finest Retreats</h3>
-            <p>finestretreats.co.uk — Public holiday-rental site used as a sample audit.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://finestretreats.co.uk/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/finest-retreats-uk.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">Modern Dental Studios</span>
-            </div>
-            <h3>Tend Dental Studios</h3>
-            <p>hellotend.com — Public dental-studio site used as a sample audit.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://hellotend.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/tend-dental-usa.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">Enterprise B2B SaaS</span>
-            </div>
-            <h3>Betterworks</h3>
-            <p>betterworks.com — Enterprise OKR and continuous performance management SaaS platform dominating enterprise HR search terms.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://betterworks.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/betterworks-usa.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">D2C Brand &amp; Gear</span>
-            </div>
-            <h3>The Ridge</h3>
-            <p>ridgewallet.com — Public product site used as a sample audit.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://ridgewallet.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/ridge-wallet-usa.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">Specialty Café &amp; D2C</span>
-            </div>
-            <h3>Blue Bottle Coffee</h3>
-            <p>bluebottlecoffee.com — Public café site used as a sample audit.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://bluebottlecoffee.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/blue-bottle-coffee.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">Boutique Real Estate</span>
-            </div>
-            <h3>Hilton &amp; Hyland</h3>
-            <p>hiltonhyland.com — Premier Beverly Hills boutique luxury brokerage dominating architectural estate searches, Bel Air mansions &amp; high-net-worth buyer advisory.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://hiltonhyland.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/hilton-hyland-real-estate.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Immersive Entertainment</span>
-            </div>
-            <h3>Secret Cinema</h3>
-            <p>secretcinema.com — Global pioneer of immersive 360° cinema experiences, theatrical film sets &amp; high-demand experiential live event ticketing.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://www.secretcinema.com/" target="_blank" rel="noopener noreferrer">Live Site ↗</a>
-              <a href="portfolio/reports/secret-cinema-entertainment.html" target="_blank" rel="noopener noreferrer">SEO Report ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Tab Panel 3: Mobile Applications -->
-      <div class="portfolio__panel" id="panel-apps" role="tabpanel" aria-labelledby="tab-apps" hidden>
-        <div class="portfolio__panel-header reveal">
-          <h3 class="portfolio__label">Mobile Applications</h3>
-          <p class="portfolio__intro">Store links for apps. Sample audits are public apps used as references, not claimed MubeCodes builds.</p>
-        </div>
-        <div class="portfolio__grid">
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">Real Estate</span>
-            </div>
-            <h3>BWC — Blue World City</h3>
-            <p>Official Blue World City property app — biometric login, plot verification, installment invoices, PDF receipts &amp; virtual tours.</p>
-            <div class="project__links">
-              <a href="https://play.google.com/store/apps/details?id=com.bwc.mobile.members" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-              <a href="https://apps.apple.com/app/blue-world-city/id1581333932" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">Fintech &amp; Ledger</span>
-            </div>
-            <h3>BWC Digital Wallet</h3>
-            <p>Digital wallet for dealer ledger management, transaction verification, receipts, and secure cloud financial reporting.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/bwc-digital-wallet/id6785460060" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">Community</span>
-            </div>
-            <h3>TFND App</h3>
-            <p>Women’s networking app for The Female Network Dubai — community directory, VIP event tickets, perks &amp; in-app chat.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/ae/app/tfnd-app/id6480346971" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.Tfndappproduction" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">On-Demand</span>
-            </div>
-            <h3>SFYKEA App</h3>
-            <p>Door-to-door car wash booking in Pakistan — live GPS map pins, automated scheduling, rider tracking &amp; package payments.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/sfykea/id1614229829" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.carantechnologies.sfykea" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">Field Sales FMCG</span>
-            </div>
-            <h3>Khilafat Cola</h3>
-            <p>Field sales app with role-based dashboards, attendance, shop visits, GPS route tracking, order cart &amp; offline-first sync.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/khilafat-cola/id6744438300" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.khilafat.cola" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">Jobs &amp; Visa</span>
-            </div>
-            <h3>WorkinAUS</h3>
-            <p>Job search across Australia — profile resume builder, visa 417 regional work tracking, quick apply &amp; employer chat.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/workinaus/id1605930673" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=workInAUS.sociabletech.com.au" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">News &amp; Media</span>
-            </div>
-            <h3>Suno News HD</h3>
-            <p>Official Suno News HD news reader app — breaking current affairs alerts, live television stream &amp; talk show clips.</p>
-            <div class="project__links">
-              <a href="https://play.google.com/store/apps/details?id=com.bwc.sunotv" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">Health &amp; Wellness</span>
-            </div>
-            <h3>MoodWise App</h3>
-            <p>Minimalist mood tracker for emotional well-being — log energy, sleep, anxiety notes, graphs &amp; on-device private backup.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/moodwise/id6476468012" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.lakesidecoding.moodwise" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">App</span>
-              <span class="project__tag">Music Social</span>
-            </div>
-            <h3>Beat Jerky</h3>
-            <p>Music social hub for artists, beatmakers, and sound designers to collaborate globally with audio waveform previews.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/app/beat-jerky/id6475585485" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">App</span>
-              <span class="project__tag">Dental &amp; Orthodontics</span>
-            </div>
-            <h3>My Invisalign — Dental App</h3>
-            <p>Premier digital dental care mobile app — virtual smile simulation, certified dentist/orthodontist locator, aligner wear-time tracker &amp; digital clinical progress scans.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/my-invisalign/id1325633853" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.aligntech.myinvisalign" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">App</span>
-              <span class="project__tag">Restaurant &amp; Dining</span>
-            </div>
-            <h3>True Food Kitchen — Dining &amp; Order</h3>
-            <p>Farm-to-table culinary restaurant app — seasonal chef-crafted menus, table ordering, curbside pickup scheduling &amp; conscious dining rewards.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/true-food-kitchen/id1450685939" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.thanx.truefoodkitchen" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">App</span>
-              <span class="project__tag">Salon &amp; E‑commerce</span>
-            </div>
-            <h3>Fresha — Salon &amp; Beauty Booking</h3>
-            <p>Premier beauty salon &amp; wellness marketplace app — book top hair stylists, estheticians &amp; nail artists 24/7 with integrated product checkout &amp; card pay.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://apps.apple.com/us/app/fresha-for-customers/id1297230801" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.fresha.Fresha" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Tab Panel 4: ASO (App Store Optimization) -->
-      <div class="portfolio__panel" id="panel-aso" role="tabpanel" aria-labelledby="tab-aso" hidden>
-        <div class="portfolio__panel-header reveal">
-          <h3 class="portfolio__label">ASO — App Store Optimization Case Studies</h3>
-          <p class="portfolio__intro">App store notes. Sample audits are public apps. Rank and install figures are not shown.</p>
-        </div>
-        <div class="portfolio__grid">
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Food &amp; Delivery ASO</span>
-            </div>
-            <h3>Deliveroo — Food &amp; Takeaway UK</h3>
-            <p>Geo-targeted UK food ordering and rapid grocery metadata optimization with localized seasonal screenshot A/B testing across Britain.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-deliveroo-uk.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/gb/app/deliveroo-food-delivery/id1001501844" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.deliveroo.orderapp" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">Dental ASO</span>
-            </div>
-            <h3>My Invisalign — Aligners &amp; Smile Care</h3>
-            <p>Full-funnel ASO strategy targeting cosmetic dentistry and teeth straightening queries with virtual smile simulator creative galleries.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-invisalign.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/us/app/my-invisalign/id1325633853" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.aligntech.myinvisalign" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">Social &amp; Community ASO</span>
-            </div>
-            <h3>Meetup — Local Events &amp; Social Groups</h3>
-            <p>Data-driven metadata and visual narrative optimization targeting local social groups, professional meetups, and hobby community searches.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-meetup-usa.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/us/app/meetup-social-events-groups/id375990038" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.meetup" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Entertainment &amp; Events</span>
-            </div>
-            <h3>DICE — Live Shows &amp; Event Tickets</h3>
-            <p>Live concert discovery and anti-scalping transparent ticketing ASO campaign capturing UK live music fans and festivalgoers.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-dice-uk.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/gb/app/dice-live-shows/id898358948" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=fm.dice" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan &amp; GCC</span>
-              <span class="project__tag">Real Estate ASO</span>
-            </div>
-            <h3>BWC Mobile — App Store &amp; Play Store</h3>
-            <p>Comprehensive ASO campaign optimizing metadata, titles, and localized search keywords for real estate investment in Pakistan and the Middle East.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-bwc.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.bwc.mobile.members" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-              <a href="https://apps.apple.com/app/blue-world-city/id1581333932" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇦🇪 UAE</span>
-              <span class="project__tag">iOS ASO</span>
-            </div>
-            <h3>TFND App — Women's Network Dubai</h3>
-            <p>Tailored iOS ASO campaign targeting professional networking, female empowerment, and UAE expat community search traffic across Dubai and Abu Dhabi.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-tfnd.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/ae/app/tfnd-app/id6480346971" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.Tfndappproduction" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">On-Demand Auto</span>
-            </div>
-            <h3>SFYKEA — Car Wash Booking</h3>
-            <p>Geo-localized Android Play Store optimization for doorstep automotive services and mobile car cleaning in Lahore and Karachi with fast-booking funnel previews.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-sfykea.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.carantechnologies.sfykea" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-              <a href="https://apps.apple.com/us/app/sfykea/id1614229829" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇺🇸 Global / US</span>
-              <span class="project__tag">Health &amp; Fitness</span>
-            </div>
-            <h3>MoodWise — Minimalist Mood Tracker</h3>
-            <p>App Store Optimization focusing on mental wellness, CBT journaling, and mood monitoring keywords. Screenshot and icon split testing elevated install conversion by 28%.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-moodwise.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/us/app/moodwise/id6476468012" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=com.lakesidecoding.moodwise" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇦🇺 Australia</span>
-              <span class="project__tag">Jobs &amp; Visa ASO</span>
-            </div>
-            <h3>WorkinAUS — Job Search Australia</h3>
-            <p>Australian job seeker and visa 417 regional work keyword targeting with 1-tap mobile application gallery optimizations.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-workinaus.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/us/app/workinaus/id1605930673" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-              <a href="https://play.google.com/store/apps/details?id=workInAUS.sociabletech.com.au" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
-            </div>
-          </article>
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇺🇸 Global / US</span>
-              <span class="project__tag">Music &amp; Audio</span>
-            </div>
-            <h3>Beat Jerky — Music Social Hub</h3>
-            <p>Niche iOS keyword targeting for beatmakers, rap vocalists, and sound designers. Optimized App Store creative gallery showcasing live audio waveform collaboration.</p>
-            <div class="project__links">
-              <a href="portfolio/reports/aso-beatjerky.html" target="_blank" rel="noopener noreferrer">ASO Case Report ↗</a>
-              <a href="https://apps.apple.com/app/beat-jerky/id6475585485" target="_blank" rel="noopener noreferrer">App Store ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Tab Panel 5: PPC & Social Media Ads -->
-      <div class="portfolio__panel" id="panel-ppc" role="tabpanel" aria-labelledby="tab-ppc" hidden>
-        <div class="portfolio__panel-header reveal">
-          <h3 class="portfolio__label">PPC &amp; Social Media Ad Campaigns</h3>
-          <p class="portfolio__intro">Campaign notes for client brands and sample audits. Ad-account figures that cannot be opened live are not shown on these cards.</p>
-          <p class="portfolio__intro" style="margin-top:0.5rem;"><a href="portfolio/reports/ppc-social-media.html" target="_blank" rel="noopener noreferrer">View full PPC dashboard with all 8 brands ↗</a></p>
-        </div>
-        <div class="portfolio__grid">
-          <!-- 1. Dubai: TFND -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇦🇪 Dubai, UAE</span>
-              <span class="project__tag">Community &amp; Events</span>
-            </div>
-            <h3>The Female Network Dubai — Insta Growth</h3>
-            <p>Instagram creator whitelisting, luxury event ticketing funnels in Downtown Dubai, and recurring annual membership acquisition across high-net-worth expat women in the UAE.</p>
-            <div class="project__links">
-              <a href="https://thefemalenetworkdubai.com" target="_blank" rel="noopener noreferrer">Visit Site ↗</a>
-              <a href="https://www.instagram.com/thefemalenetworkdubai/" target="_blank" rel="noopener noreferrer">Instagram: @thefemalenetworkdubai ↗</a>
-              <a href="portfolio/reports/ppc-tfnd-dubai.html" target="_blank" rel="noopener noreferrer">Meta &amp; TikTok Report ↗</a>
-            </div>
-          </article>
-
-          <!-- 2. UK: The Tartan Blanket Co. -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Sustainable D2C Gifting</span>
-            </div>
-            <h3>The Tartan Blanket Co. — Catalog Shopping</h3>
-            <p>Meta Advantage+ Shopping Campaigns (ASC), Dynamic Product Catalog Ads on Instagram Stories, and high-converting holiday gifting retargeting across the UK and North America.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://tartanblanketco.com/" target="_blank" rel="noopener noreferrer">Visit Store ↗</a>
-              <a href="https://www.instagram.com/tartanblanketco/" target="_blank" rel="noopener noreferrer">Instagram: @tartanblanketco ↗</a>
-              <a href="portfolio/reports/ppc-tartan-blanket-uk.html" target="_blank" rel="noopener noreferrer">Meta &amp; Google Report ↗</a>
-            </div>
-          </article>
-
-          <!-- 3. UK: Apex Hotels UK -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇬🇧 United Kingdom</span>
-              <span class="project__tag">Boutique Luxury Stays</span>
-            </div>
-            <h3>Apex Hotels UK — Direct Booking Ads</h3>
-            <p>Dynamic Meta Travel Ads (DTA) on Instagram/Facebook and Google Hotel Ads targeting weekend staycationers and spa lovers across London, Edinburgh, and Bath, bypassing 18–22% OTA commissions.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://www.apexhotels.co.uk/" target="_blank" rel="noopener noreferrer">Visit Hotels ↗</a>
-              <a href="https://www.instagram.com/apexhotels/" target="_blank" rel="noopener noreferrer">Instagram: @apexhotels ↗</a>
-              <a href="portfolio/reports/ppc-apex-hotels-uk.html" target="_blank" rel="noopener noreferrer">Meta &amp; Google Report ↗</a>
-            </div>
-          </article>
-
-          <!-- 4. USA: Tend Dental Studios -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">Modern Healthcare</span>
-            </div>
-            <h3>Tend Dental Studios — Patient Acquisition</h3>
-            <p>Hyper-targeted Meta Instant Lead Forms and local Instagram Story appointment booking for cosmetic dentistry, Invisalign, and routine exams across NYC, DC, and Boston studios.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://hellotend.com/" target="_blank" rel="noopener noreferrer">Visit Studios ↗</a>
-              <a href="https://www.instagram.com/hellotend/" target="_blank" rel="noopener noreferrer">Instagram: @hellotend ↗</a>
-              <a href="portfolio/reports/ppc-tend-dental-usa.html" target="_blank" rel="noopener noreferrer">Meta, Google &amp; TikTok Report ↗</a>
-            </div>
-          </article>
-
-          <!-- 5. USA: The Ridge Wallet -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇺🇸 United States</span>
-              <span class="project__tag">D2C Everyday Carry</span>
-            </div>
-            <h3>The Ridge Wallet — Advantage+ Video Drops</h3>
-            <p>Advantage+ Shopping Campaigns on Meta, creator pocket-drop UGC Reels, and vertical video testimonials showcasing RFID blocking, aerospace-grade titanium, and lifetime warranty.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://ridgewallet.com/" target="_blank" rel="noopener noreferrer">Visit Store ↗</a>
-              <a href="https://www.instagram.com/ridgewallet/" target="_blank" rel="noopener noreferrer">Instagram: @ridgewallet ↗</a>
-              <a href="https://www.youtube.com/@RidgeWallet" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
-              <a href="portfolio/reports/ppc-ridge-wallet-usa.html" target="_blank" rel="noopener noreferrer">Meta, TikTok &amp; Google Report ↗</a>
-            </div>
-          </article>
-
-          <!-- 6. Pakistan: Suno News HD -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇵🇰 Pakistan</span>
-              <span class="project__tag">Broadcast Media</span>
-            </div>
-            <h3>Suno News HD — Social &amp; Video Reach</h3>
-            <p>YouTube Shorts, Meta Reels, and TikTok dynamic news syndication funnels distributing breaking headlines, election debates, and viral talk show segments at scale.</p>
-            <div class="project__links">
-              <a href="https://sunonews.tv/" target="_blank" rel="noopener noreferrer">Visit Channel ↗</a>
-              <a href="https://www.youtube.com/@SunoNewsHD" target="_blank" rel="noopener noreferrer">YouTube: @SunoNewsHD ↗</a>
-              <a href="https://www.instagram.com/sunonewshd/" target="_blank" rel="noopener noreferrer">Instagram: @sunonewshd ↗</a>
-              <a href="portfolio/reports/ppc-suno-news.html" target="_blank" rel="noopener noreferrer">TikTok, Meta &amp; YouTube Report ↗</a>
-            </div>
-          </article>
-
-          <!-- 7. Australia: WorkinAUS -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag">🇦🇺 Australia</span>
-              <span class="project__tag">Visas &amp; Skilled Jobs</span>
-            </div>
-            <h3>WorkinAUS — Subclass 417 &amp; 482 Leads</h3>
-            <p>Meta Instant Lead Forms and Instagram Reels video carousels targeting UK, Irish, and European travellers for hospitality, agriculture, and skilled jobs across Sydney, Melbourne, and Queensland.</p>
-            <div class="project__links">
-              <a href="https://workinaus.com.au/" target="_blank" rel="noopener noreferrer">Visit Platform ↗</a>
-              <a href="https://www.instagram.com/workinaus/" target="_blank" rel="noopener noreferrer">Instagram: @workinaus ↗</a>
-              <a href="https://www.linkedin.com/company/workinaus/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-              <a href="portfolio/reports/workinaus-australia.html" target="_blank" rel="noopener noreferrer">Meta Ads &amp; PPC Report ↗</a>
-            </div>
-          </article>
-
-          <!-- 8. Australia: Koala Eco Australia -->
-          <article class="project reveal">
-            <div class="project__meta">
-              <span class="project__tag project__tag--sample">Sample audit</span>
-              <span class="project__tag">🇦🇺 Australia</span>
-              <span class="project__tag">Eco D2C &amp; Lifestyle</span>
-            </div>
-            <h3>Koala Eco Australia — Botanical Home Care</h3>
-            <p>Advantage+ Shopping Campaigns on Meta, native scent unboxing Reels on Instagram, and starter kit bundle retargeting scaling online orders across Australian metro markets.</p>
-            
-            <p class="project__note">Sample audit of a public site. Not a MubeCodes client project.</p>
-            <div class="project__links">
-              <a href="https://koala.eco/" target="_blank" rel="noopener noreferrer">Visit Store ↗</a>
-              <a href="https://www.instagram.com/koalaeco/" target="_blank" rel="noopener noreferrer">Instagram: @koalaeco ↗</a>
-              <a href="https://www.facebook.com/koalaeco/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
-              <a href="portfolio/reports/koala-eco-australia.html" target="_blank" rel="noopener noreferrer">Meta Ads &amp; PPC Report ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
     </section>
 
     <section class="cta-band">
@@ -1722,7 +1006,7 @@
 
   <a href="#contact" class="float-cta" aria-label="Book free growth call">Free Call</a>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 
   <!-- Floating WhatsApp CTA -->
   <a href="https://wa.me/923440903071?text=Hi%20MubeCodes%2C%20I%20visited%20your%20website%20and%20want%20to%20grow%20my%20business." 
